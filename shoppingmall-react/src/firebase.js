@@ -1,5 +1,5 @@
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
+const firebaseConfig = { // eslint-disable-line no-unused-vars
     apiKey: "AIzaSyDlXgTXiSCy8yTD_Q7pj_AlMKZrrimyOJ4",
     authDomain: "shoppingmall-react.firebaseapp.com",
     projectId: "shoppingmall-react",

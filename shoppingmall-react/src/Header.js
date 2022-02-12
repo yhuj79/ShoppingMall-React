@@ -1,12 +1,19 @@
+/*!
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * LogoImage is licensed under the Creative Commons Attribution-Share Alike 4.0 International license.
+ * https://seeklogo.com/vector-logo/5123/air-jordan
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ */
 import React from 'react';
 import styled from 'styled-components';
 import SearchIcon from '@material-ui/icons/Search';
-import LogoImage from './image/AirJordanLogo.jpg';
+import ShoppingBasket from '@material-ui/icons/ShoppingBasket';
+import LogoImage from './image/LogoImage.jpg';
 
 function Header() {
     return (
         <StyleHeader>
-            <img alt="" className='header_logo' src={LogoImage} />
+            <img alt='' className='header_logo' src={LogoImage} />
             <div className='header_search'>
                 <input className='header_searchInput' type='text' />
                 <SearchIcon className='header_searchIcon' />
@@ -24,12 +31,17 @@ function Header() {
                     <span className='header_optionLineOne'>Created by</span>
                     <span className='header_optionLineTwo'>React</span>
                 </div>
+
+                <div className='header_optionBasket'>
+                    <ShoppingBasket />
+                    <span className='header_optionLineTwoheader_basketCount'>0</span>
+                </div>
             </div>
         </StyleHeader>
     );
 }
 const StyleHeader = styled.div`
-    height: 80px;
+    height: 75px;
     display: flex;
     align-items: center;
     background-color: black;
@@ -39,7 +51,8 @@ const StyleHeader = styled.div`
 
     .header_logo {
         width: 150px;
-        object-fit: contain; // 비율을 유지한 상태로 조정?
+        object-fit: contain; // 비율을 유지한 상태로 조정
+        border-radius: 100%;
         margin: 0 20px;
     }
     .header_search {
@@ -49,22 +62,42 @@ const StyleHeader = styled.div`
         border-radius: 20px;
     }
     .header_searchInput {
+        height: 15px;
+        padding: 10px;
+        border: none;
+        width: 100%;
     }
     .header_searchIcon {
         background-color: #F2CB61;
-        padding: 5px 3px;
-        height: 15px;
+        padding: 5px;
+        height: 25px;
     }
     .header_nav {
         display: flex;
         justify-content: space-evenly;
     }
-    .header_nav > .header_option {
+    .header_option {
         display: flex;
         flex-direction: column;
-        margin-left: 10px;
-        margin-right: 10px;
+        margin-left: 12px;
+        margin-right: 12px;
         color: #ffffff;
+    }
+    .header_optionLineOne {
+        font-size: 10px;
+    }
+    .header_optionLineTwo {
+        font-size: 13px;
+        font-weight: 800;
+        margin-top: 3px;
+    }
+    .header_optionBasket {
+        display: flex;
+        align-items: center;
+        color: white;
+    }
+    .header_optionLineTwoheader_basketCount {
+        margin-left: 10px; margin-right: 10px;
     }
 `
 export default Header;
