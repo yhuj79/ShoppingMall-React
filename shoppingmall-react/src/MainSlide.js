@@ -1,23 +1,25 @@
 /*!
- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
- * Slide-img1 is licensed under the Creative Commons Attribution-NonCommercial-NoDerivs 2.0 Generic license.
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * Slide-img is licensed under the Creative Commons license.
  * https://www.flickr.com/photos/merlijnhoek/43697484512
- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
- * Slide-img2 is licensed under the Creative Commons Copyright-Only Dedication or Public Domain Certification license.
  * https://pixabay.com/photos/basketball-shoes-sneaker-air-jordan-3505340/
- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
- * Slide-img3 is licensed under the Creative Commons Copyright-Only Dedication or Public Domain Certification license.
  * https://pixabay.com/photos/adult-air-jordan-athlete-blur-boy-1867073/
- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * https://www.flickr.com/photos/luxurydesigner/24197471942/in/photostream/
+ * https://www.maxpixel.net/Shoes-Nike-Jordan-1-Fashion-Sneakers-Jordan-5418992
+ * https://www.kicksonfire.com/wp-content/uploads/2007/11/air-jordan-1-i-whiteblack-red-wallpaper.jpg?x58464
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  */
 import React from "react";
 import styled from 'styled-components';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Slide1 from "./image/Slide-img1.jpg";
-import Slide2 from "./image/Slide-img2.jpg";
-import Slide3 from "./image/Slide-img3.jpg";
+import Slide1 from "./image/slide/Slide-img1.jpg";
+import Slide2 from "./image/slide/Slide-img2.jpg";
+import Slide3 from "./image/slide/Slide-img3.jpg";
+import Slide4 from "./image/slide/Slide-img4.jpg";
+import Slide5 from "./image/slide/Slide-img5.jpg";
+import Slide6 from "./image/slide/Slide-img6.jpg";
 
 const settings = {
     arrows: false,
@@ -32,17 +34,21 @@ const settings = {
 
 function MainSlide() {
     return (
-        <StyleMainSlide>
+        <StyledMainSlide>
             <Slider {...settings}>
                 <img alt="" src={Slide1} />
                 <img alt="" src={Slide2} />
                 <img alt="" src={Slide3} />
+                <img alt="" src={Slide4} />
+                <img alt="" src={Slide5} />
+                <img alt="" src={Slide6} />
             </Slider>
-        </StyleMainSlide>
+        </StyledMainSlide>
     );
 }
-const StyleMainSlide = styled.div`
+const StyledMainSlide = styled.div`
     background-color: black;
-    padding: 20px 30px 35px 30px;
+    margin: 0 150px 0;
+    padding: 5px 40px 20px;
 `
 export default MainSlide;

@@ -12,7 +12,7 @@ import LogoImage from './image/LogoImage.jpg';
 
 function Header() {
     return (
-        <StyleHeader>
+        <StyledHeader>
             <img alt='' className='header_logo' src={LogoImage} />
             <div className='header_search'>
                 <input className='header_searchInput' type='text' />
@@ -37,10 +37,10 @@ function Header() {
                     <span className='header_optionLineTwoheader_basketCount'>0</span>
                 </div>
             </div>
-        </StyleHeader>
+        </StyledHeader>
     );
 }
-const StyleHeader = styled.div`
+const StyledHeader = styled.div`
     height: 75px;
     display: flex;
     align-items: center;
