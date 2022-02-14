@@ -20,26 +20,86 @@ function ProductList() {
                         price={(606000).toLocaleString('en')}
                     />
                     <Product
-                        id="0001"
+                        id="0002"
                         image={require("./image/product/Jordan1_MidLightSmokeGrey.png")}
                         category="Jordan 1"
                         title="Mid Light Smoke Grey"
                         price={(695000).toLocaleString('en')}
                     />
-                    <Product />
-                    <Product />
+                    <Product
+                        id="0003"
+                        image={require("./image/product/Jordan6_RetroCarmine2021.png")}
+                        category="Jordan 6"
+                        title="Retro Carmine 2021"
+                        price={(269000).toLocaleString('en')}
+                    />
+                    <Product
+                        id="0004"
+                        image={require("./image/product/Jordan1_TravisScottxFragmentRetroLowOGSPMilitaryBlue.png")}
+                        category="Jordan 1"
+                        title="Travis Scott x Fragment Retro Low Military Blue"
+                        price={(2920000).toLocaleString('en')}
+                    />
                 </div>
                 <div className='product_row'>
-                    <Product />
-                    <Product />
-                    <Product />
-                    <Product />
+                    <Product
+                        id="0005"
+                        image={require("./image/product/Jordan1_LowSEChocolateBliss.png")}
+                        category="Jordan 1"
+                        title="Low SE Chocolate Bliss"
+                        price={(279000).toLocaleString('en')}
+                    />
+                    <Product
+                        id="0006"
+                        image={require("./image/product/Jordan11_RetroCoolGrey2021.png")}
+                        category="Jordan 11"
+                        title="Retro Cool Grey 2021"
+                        price={(295000).toLocaleString('en')}
+                    />
+                    <Product
+                        id="0007"
+                        image={require("./image/product/Jordan1_RetroHighOGBlackMocha.png")}
+                        category="Jordan 1"
+                        title="Retro High OG Black Mocha"
+                        price={(786000).toLocaleString('en')}
+                    />
+                    <Product
+                        id="0008"
+                        image={require("./image/product/Jordan1_LowGolfChicago.png")}
+                        category="Jordan 1"
+                        title="Low Golf Chicago"
+                        price={(624000).toLocaleString('en')}
+                    />
                 </div>
                 <div className='product_row'>
-                    <Product />
-                    <Product />
-                    <Product />
-                    <Product />
+                    <Product
+                        id="0009"
+                        image={require("./image/product/Jordan1_RetroHighOGPatentBred.png")}
+                        category="Jordan 1"
+                        title="Retro High OG Patent Bred"
+                        price={(289000).toLocaleString('en')}
+                    />
+                    <Product
+                        id="0010"
+                        image={require("./image/product/Jordan2_Off-WhiteRetroLowSPWhiteandVarsityRed.png")}
+                        category="Jordan 2"
+                        title="Off-White Retro Low SP White and Varsity Red"
+                        price={(1290000).toLocaleString('en')}
+                    />
+                    <Product
+                        id="0011"
+                        image={require("./image/product/Jordan1_DiorHighOG.png")}
+                        category="Jordan 1"
+                        title="Jordan1 x Dior High OG"
+                        price={(12400000).toLocaleString('en')}
+                    />
+                    <Product
+                        id="0012"
+                        image={require("./image/product/Jordan4_RetroCrimson.png")}
+                        category="Jordan 4"
+                        title="Retro Crimson"
+                        price={(336000).toLocaleString('en')}
+                    />
                 </div>
             </div>
         </StyledProductList>

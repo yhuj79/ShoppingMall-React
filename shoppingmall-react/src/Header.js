@@ -6,6 +6,7 @@
  */
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import SearchIcon from '@material-ui/icons/Search';
 import ShoppingBasket from '@material-ui/icons/ShoppingBasket';
 import LogoImage from './image/LogoImage.jpg';
@@ -13,7 +14,9 @@ import LogoImage from './image/LogoImage.jpg';
 function Header() {
     return (
         <StyledHeader>
-            <img alt='' className='header_logo' src={LogoImage} />
+            <Link to="/">
+                <img alt='' className='header_logo' src={LogoImage} />
+            </Link>
             <div className='header_search'>
                 <input className='header_searchInput' type='text' />
                 <SearchIcon className='header_searchIcon' />
@@ -31,11 +34,12 @@ function Header() {
                     <span className='header_optionLineOne'>Created by</span>
                     <span className='header_optionLineTwo'>React</span>
                 </div>
-
-                <div className='header_optionBasket'>
-                    <ShoppingBasket />
-                    <span className='header_optionLineTwoheader_basketCount'>0</span>
-                </div>
+                <Link to="/checkout">
+                    <div className='header_optionBasket'>
+                        <ShoppingBasket />
+                        <span className='header_optionLineTwoheader_basketCount'>0</span>
+                    </div>
+                </Link>
             </div>
         </StyledHeader>
     );

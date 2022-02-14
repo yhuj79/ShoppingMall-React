@@ -4,7 +4,7 @@ import ShoppingBasket from '@material-ui/icons/ShoppingBasket';
 
 function Product({ id, image, category, title, price }) {
     return (
-        <StyledProduct className="product">
+        <StyledProduct>
             <StyledButton><ShoppingBasket /><p>Cart</p></StyledButton>
             <StyledImage alt="" src={image} />
             <div className="product_info">
