@@ -8,7 +8,7 @@ function Product({ id, image, category, title, price }) {
             <StyledButton><ShoppingBasket /><p>Cart</p></StyledButton>
             <StyledImage alt="" src={image} />
             <div className="product_info">
-                <Category>{category}</Category>
+                <StyledCategory>{category}</StyledCategory>
                 <p>{title}</p>
                 <p className="product_price">
                     <strong>{price}</strong>
@@ -25,7 +25,7 @@ const StyledProduct = styled.div`
     margin: 35px; padding: 20px;
     max-height: 400px;
     width: 350px;
-    background-color: #D8D8D8;
+    background-color: #EAEAEA;
     border-radius: 15px;
 
     .product_info {
@@ -49,7 +49,7 @@ const StyledImage = styled.img`
     object-fit: contain;
     margin-bottom: 5px;
 `
-const Category = styled.p`
+const StyledCategory = styled.p`
     text-decoration: underline;
     text-underline-position: under;
 `
