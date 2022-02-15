@@ -6,5 +6,5 @@ export const StateProvider = ({ reducer, initialState, children }) => (
         {children}
     </StateContext.Provider>
 )
-// 각각 전달
+// 각 컴포넌트에 전달
 export const useStateValue = () => useContext(StateContext);

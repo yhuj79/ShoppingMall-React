@@ -40,7 +40,7 @@ function Header() {
                     <div className='header_optionBasket'>
                         <ShoppingBasket />
                         <span className='header_optionLineTwoheader_basketCount'>
-                            {basket?.length}
+                            {basket?.length}{/* Optional Chaining */}
                         </span>
                     </div>
                 </Link>
