@@ -1,15 +1,18 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import styled from 'styled-components';
 import ShoppingBasket from '@material-ui/icons/ShoppingBasket';
 import { useStateValue } from './StateProvider';
 
+let headID = 0;
 function Product({ id, image, category, title, price }) {
+    const addNextID = useRef(headID);
+    headID += 1000;
     const [{ basket }, dispatch] = useStateValue();
     const addToBasket = () => {
         dispatch({
             type: 'ADD_TO_BASKET',
             item: {
-                id: id,
+                id: addNextID.current += 1,
                 image: image,
                 category: category,
                 title: title,
@@ -55,7 +58,7 @@ const StyledButton = styled.button`
     width: 50px; height: 50px;
     background-color: black;
     color: white;
-    border-color: white;
+    border-color: white; border-radius: 7px;
 `
 const StyledImage = styled.img`
     max-height: 300px;

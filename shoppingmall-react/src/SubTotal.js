@@ -16,7 +16,7 @@ function SubTotal() {
                             총액 ({basket.length} items) : <strong>{value}원</strong>
                         </p>
                         <StyledSmall className="subtotal_gift">
-                            <input type="checkbox" />체크박스입니다
+                            <input type="checkbox" />&nbsp;주문 내용을 확인하였습니다.
                         </StyledSmall>
                     </>
                 )}
@@ -32,15 +32,18 @@ function SubTotal() {
 }
 const StyledSubTotal = styled.div`
     display: flex; flex-direction: column;
-    background-color: #f3f3f3;
-    width: 300px;
-    height: 100px;
+    background-color: #D5D5D5;
+    width: 350px;
+    height: 120px;
     padding: 20px;
-    border: 1px solid #dddddd; border-radius: 5px;
+    margin: 20px;
+    border-radius: 15px;
 `
 const StyledSmall = styled.small`
     display: flex;
     align-items: center;
+    width: 300px;
+    margin-top: 15px;
 
     .input {
         margin-right: 5px;

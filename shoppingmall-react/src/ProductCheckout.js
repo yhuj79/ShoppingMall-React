@@ -11,21 +11,45 @@ function ProductCheckout({ id, image, category, title, price }) {
         })
     }
     return (
-        <div className="productcheckout">
+        <StyledProductCheckout>
             <StyledImage alt="" src={image} />
-            <div className="productcheckout_info">
-                <p>{category}</p>
+            <div className="productcheckout_title">
+                <p>{category}&nbsp;</p>
                 <p>{title}</p>
-                <p className="productcheckout_price">
-                    <strong>{price.toLocaleString('en')}</strong>
-                    <small>원</small>
-                </p>
-                <button onClick={removeFromBasket}>장바구니에서 제거</button>
             </div>
-        </div>
+            <p className="productcheckout_price">
+                <strong>{price.toLocaleString('en')}</strong>
+                <small>원</small>
+            </p>
+            <div className="productcheckout_button">
+                <StyledButton onClick={removeFromBasket}>삭제</StyledButton>
+            </div>
+        </StyledProductCheckout>
     );
 }
+const StyledProductCheckout = styled.div`
+    display: flex;
+    padding: 20px;
+    border-bottom: 2px solid black;
+    line-height: 95px;
+
+    .productcheckout_title {
+        display: flex;
+        width: 400px;
+    }
+    .productcheckout_price {
+        width: 90px;
+        margin-left: 400px;
+    }
+    .productcheckout_button {
+        width: 50px;
+        margin-left: 20px;
+    }
+`
 const StyledImage = styled.img`
-    width: 100px;
+    width: 150px;
+`
+const StyledButton = styled.button`
+
 `
 export default ProductCheckout;
