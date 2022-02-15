@@ -1,17 +1,31 @@
 import React from 'react';
 import styled from 'styled-components';
 import ShoppingBasket from '@material-ui/icons/ShoppingBasket';
+import { useStateValue } from './StateProvider';
 
 function Product({ id, image, category, title, price }) {
+    const [{ basket }, dispatch] = useStateValue();
+    const addToBasket = () => {
+        dispatch({
+            type: 'ADD_TO_BASKET',
+            item: {
+                id: id,
+                image: image,
+                category: category,
+                title: title,
+                price: price,
+            }
+        })
+    }
     return (
         <StyledProduct>
-            <StyledButton><ShoppingBasket /><p>Cart</p></StyledButton>
+            <StyledButton onClick={addToBasket}><ShoppingBasket /><p>Cart</p></StyledButton>
             <StyledImage alt="" src={image} />
             <div className="product_info">
                 <StyledCategory>{category}</StyledCategory>
                 <p>{title}</p>
                 <p className="product_price">
-                    <strong>{price}</strong>
+                    <strong>{price.toLocaleString('en')}</strong>
                     <small>원</small>
                 </p>
             </div>
@@ -25,7 +39,7 @@ const StyledProduct = styled.div`
     margin: 35px; padding: 20px;
     max-height: 400px;
     width: 350px;
-    background-color: #EAEAEA;
+    background-color: #D5D5D5;
     border-radius: 15px;
 
     .product_info {
