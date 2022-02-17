@@ -1,6 +1,7 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import styled from 'styled-components';
 import ShoppingBasket from '@material-ui/icons/ShoppingBasket';
+import SelectSizeModal from 'react-modal';
 import { useStateValue } from './StateProvider';
 
 let headID = 0;
@@ -19,10 +20,47 @@ function Product({ id, image, category, title, price }) {
                 price: price,
             }
         })
+        setModalIsOpen(false)
     }
+    const [modalIsOpen, setModalIsOpen] = useState(false);
     return (
         <StyledProduct>
-            <StyledButton onClick={addToBasket}><ShoppingBasket /><p>Cart</p></StyledButton>
+            <StyledButton onClick={() => setModalIsOpen(true)}><ShoppingBasket /><p>Cart</p></StyledButton>
+            <SelectSizeModal ariaHideApp={false} isOpen={modalIsOpen} onRequestClose={() => setModalIsOpen(false)}
+                style={{
+                    overlay: {
+                        backgroundColor: 'rgba(25, 25, 25, 0.75)'
+                    },
+                    content: {
+                        position: 'absolute',
+                        width: '800px', height: '600px',
+                        top: '50%',
+                        left: '50%',
+                        right: '40px',
+                        bottom: '40px',
+                        transform: 'translate(-50%, -50%)',
+                        background: '#D5D5D5',
+                        overflow: 'auto',
+                        WebkitOverflowScrolling: 'touch',
+                        borderRadius: '15px',
+                        outline: 'none',
+                        padding: '20px'
+                    }
+                }}
+            >
+                <div>
+                    <StyledImage alt="" src={image} />
+                    <div className="">
+                        <p>{category}&nbsp;</p>
+                        <p>{title}</p>
+                    </div>
+                    <p className="">
+                        <strong>{price.toLocaleString('en')}</strong>
+                        <small>원</small>
+                    </p>
+                </div>
+                <button onClick={addToBasket}>245</button>
+            </SelectSizeModal>
             <StyledImage alt="" src={image} />
             <div className="product_info">
                 <StyledCategory>{category}</StyledCategory>

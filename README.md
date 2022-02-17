@@ -1,4 +1,4 @@
-### Shopping Mall with React
+## Shopping Mall with React
 
 <div>
 <img src=https://raw.githubusercontent.com/yhuj79/ShoppingMall-React/master/thumnail/thumnail.jpg width=550>
