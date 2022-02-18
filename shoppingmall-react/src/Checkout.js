@@ -30,14 +30,13 @@ const StyledCheckout = styled.div`
     padding: 20px;
     margin: 20px; margin-left: 40px;
     border-radius: 15px;
-    width: max-content; height: max-content;
+    width: 1230px; height: max-content;
 
     .checkout_list {
     }
     .checkout_title {
         margin-right: 10px;
         padding: 10px;
-        border-bottom: 2px solid black;
     }
 `
 export default Checkout;
