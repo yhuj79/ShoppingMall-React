@@ -26,7 +26,9 @@ function Header() {
             <div className='header_nav'>
                 <div className='header_option'>
                     <span className='header_optionLineOne'>안녕하세요!</span>
-                    <span className='header_optionLineTwo'>로그인하기</span>
+                    <Link to="/login" className='homelogin'>
+                        <span className='header_optionLineTwo'>로그인하기</span>
+                    </Link>
                 </div>
                 <div className='header_option'>
                     <span className='header_optionLineOne'>돌아가기</span>
@@ -90,6 +92,11 @@ const StyledHeader = styled.div`
         margin-left: 12px;
         margin-right: 12px;
         color: #ffffff;
+
+        .homelogin {
+            text-decoration: none;
+            color: white;
+        }
     }
     .header_optionLineOne {
         font-size: 10px;

@@ -40,7 +40,7 @@ function Product({ id, image, category, title, price }) {
             <Modal ariaHideApp={false} isOpen={modalIsOpen} onRequestClose={() => setModalIsOpen(false)}
                 style={{
                     overlay: {
-                        backgroundColor: 'rgba(25, 25, 25, 0.75)'
+                        backgroundColor: 'rgba(0, 0, 0, 0.75)'
                     },
                     content: {
                         position: 'absolute',
