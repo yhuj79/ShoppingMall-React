@@ -32,6 +32,7 @@ function ProductList() {
                         category="Jordan 6"
                         title="Retro Carmine 2021"
                         price={269000}
+                        size={245}
                     />
                     <Product
                         id="0004"

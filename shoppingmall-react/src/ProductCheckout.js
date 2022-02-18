@@ -14,8 +14,8 @@ function ProductCheckout({ id, image, category, title, price }) {
         <StyledProductCheckout>
             <StyledImage alt="" src={image} />
             <div className="productcheckout_title">
-                <p>{category}&nbsp;</p>
-                <p>{title}</p>
+                <p className="text">{category}&nbsp;</p>
+                <p className="text">{title}</p>
             </div>
             <p className="productcheckout_price">
                 <strong>{price.toLocaleString('en')}</strong>
@@ -35,7 +35,10 @@ const StyledProductCheckout = styled.div`
 
     .productcheckout_title {
         display: flex;
-        width: 400px;
+        width: 480px;
+        .text {
+            font-weight: 500;
+        }
     }
     .productcheckout_price {
         width: 90px;
