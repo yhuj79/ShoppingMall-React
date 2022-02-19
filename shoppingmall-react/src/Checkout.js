@@ -6,7 +6,7 @@ import { useStateValue } from './StateProvider';
 function Checkout() {
     const [{ basket }, dispatch] = useStateValue();
     return (
-        <StyledCheckout>
+        <CheckoutDiv>
             <div className="checkout_list">
                 <h2 className="checkout_title">Guest's Cart</h2>
                 {basket.map((item, uniqueID) => (
@@ -20,11 +20,11 @@ function Checkout() {
                     />
                 ))}
             </div>
-        </StyledCheckout>
+        </CheckoutDiv>
 
     );
 }
-const StyledCheckout = styled.div`
+const CheckoutDiv = styled.div`
     display: flex;
     background-color: #D5D5D5;
     padding: 20px;

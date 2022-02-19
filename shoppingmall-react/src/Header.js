@@ -15,7 +15,7 @@ import { useStateValue } from './StateProvider';
 function Header() {
     const [{ basket }, dispatch] = useStateValue();
     return (
-        <StyledHeader>
+        <HeaderDiv>
             <Link to="/">
                 <img alt='' className='header_logo' src={LogoImage} />
             </Link>
@@ -47,10 +47,10 @@ function Header() {
                     </div>
                 </Link>
             </div>
-        </StyledHeader>
+        </HeaderDiv>
     );
 }
-const StyledHeader = styled.div`
+const HeaderDiv = styled.div`
     height: 75px;
     display: flex;
     align-items: center;

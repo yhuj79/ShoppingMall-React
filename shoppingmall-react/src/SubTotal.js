@@ -7,7 +7,7 @@ import { getBasketTotal } from './Reducer';
 function SubTotal() {
     const [{ basket }, dispatch] = useStateValue();
     return (
-        <StyledSubTotal>
+        <SubTotalDiv>
             <h2>장바구니 총합</h2>
             <CurrencyFormat
                 renderText={(value) => (
@@ -15,9 +15,9 @@ function SubTotal() {
                         <p>
                             총액 ({basket.length} items) : <strong>{value}원</strong>
                         </p>
-                        <StyledSmall className="subtotal_gift">
+                        <CheckBox className="subtotal_gift">
                             <input type="checkbox" />&nbsp;주문 내용을 확인하였습니다.
-                        </StyledSmall>
+                        </CheckBox>
                     </>
                 )}
                 decimalScale={2}
@@ -26,11 +26,11 @@ function SubTotal() {
                 thousandSeparator={true}
                 prefix={"₩"}
             />
-            <StyledButton>결제하기</StyledButton>
-        </StyledSubTotal>
+            <PayButton>결제하기</PayButton>
+        </SubTotalDiv>
     );
 }
-const StyledSubTotal = styled.div`
+const SubTotalDiv = styled.div`
     display: flex; flex-direction: column;
     background-color: #D5D5D5;
     width: 350px;
@@ -39,7 +39,7 @@ const StyledSubTotal = styled.div`
     margin: 20px;
     border-radius: 15px;
 `
-const StyledSmall = styled.small`
+const CheckBox = styled.small`
     display: flex;
     align-items: center;
     width: 300px;
@@ -49,7 +49,7 @@ const StyledSmall = styled.small`
         margin-right: 5px;
     }
 `
-const StyledButton = styled.button`
+const PayButton = styled.button`
     background-color: #f0c14b;
     border-radius: 2px;
     width: 100%; height: 30px;

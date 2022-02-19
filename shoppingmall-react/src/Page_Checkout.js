@@ -10,14 +10,14 @@ function Page_Checkout() {
         <div>
             <Header />
             <MainTitle />
-            <StyledDiv>
+            <PageCheckout>
                 <Checkout />
                 <SubTotal />
-            </StyledDiv>
+            </PageCheckout>
         </div>
     );
 }
-const StyledDiv = styled.div`
+const PageCheckout = styled.div`
     display: flex;
 `
 export default Page_Checkout;

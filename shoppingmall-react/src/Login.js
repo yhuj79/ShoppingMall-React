@@ -1,27 +1,24 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import LogoImage from './image/LogoImage.jpg';
-import MainTitle from './MainTitle';
+import LoginLogo from './image/LoginLogo.PNG';
 
 function Login() {
     return (
-        <StyledLogin>
+        <LoginDiv>
             <Link to="/">
-                <StyledImage alt="" src={LogoImage} />
-                <MainTitle />
+                <Logo alt="" src={LoginLogo} />
             </Link>
-        </StyledLogin>
+        </LoginDiv>
     );
 }
-const StyledLogin = styled.div`
+const LoginDiv = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 100vh;
 `
-const StyledImage = styled.img`
-    width: 300px;
-    margin-top: 30px; margin-left: 65px;
+const Logo = styled.img`
+    width: 500px;
 `
 export default Login;

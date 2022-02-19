@@ -22,7 +22,7 @@ const settings = {
 
 function MainSlide() {
     return (
-        <StyledMainSlide>
+        <MainSlideDiv>
             <Slider {...settings}>
                 <img alt="" src={require("./image/slide/Slide-img1.jpg")} />
                 <img alt="" src={require("./image/slide/Slide-img2.jpg")} />
@@ -31,10 +31,10 @@ function MainSlide() {
                 <img alt="" src={require("./image/slide/Slide-img5.jpg")} />
                 <img alt="" src={require("./image/slide/Slide-img6.jpg")} />
             </Slider>
-        </StyledMainSlide>
+        </MainSlideDiv>
     );
 }
-const StyledMainSlide = styled.div`
+const MainSlideDiv = styled.div`
     background-color: black;
     margin: 0 150px 0;
     padding: 5px 40px 20px;

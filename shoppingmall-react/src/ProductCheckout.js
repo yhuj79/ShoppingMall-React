@@ -11,8 +11,8 @@ function ProductCheckout({ id, image, category, title, price }) {
         })
     }
     return (
-        <StyledProductCheckout>
-            <StyledImage alt="" src={image} />
+        <ProductCheckoutDiv>
+            <CartImage alt="" src={image} />
             <div className="productcheckout_title">
                 <p className="text">{category}&nbsp;</p>
                 <p className="text">{title}</p>
@@ -22,12 +22,12 @@ function ProductCheckout({ id, image, category, title, price }) {
                 <small>원</small>
             </p>
             <div className="productcheckout_button">
-                <StyledButton onClick={removeFromBasket}>삭제</StyledButton>
+                <RemoveButton onClick={removeFromBasket}>삭제</RemoveButton>
             </div>
-        </StyledProductCheckout>
+        </ProductCheckoutDiv>
     );
 }
-const StyledProductCheckout = styled.div`
+const ProductCheckoutDiv = styled.div`
     display: flex;
     padding: 20px;
     border-top: 2px solid black;
@@ -35,7 +35,7 @@ const StyledProductCheckout = styled.div`
 
     .productcheckout_title {
         display: flex;
-        width: 480px;
+        width: 500px;
         .text {
             font-weight: 500;
         }
@@ -49,10 +49,10 @@ const StyledProductCheckout = styled.div`
         margin-left: 20px;
     }
 `
-const StyledImage = styled.img`
+const CartImage = styled.img`
     width: 150px;
 `
-const StyledButton = styled.button`
+const RemoveButton = styled.button`
 
 `
 export default ProductCheckout;

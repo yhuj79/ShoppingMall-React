@@ -1,20 +1,22 @@
 import React from 'react';
 import styled from 'styled-components';
+import LogoText from './image/LogoText.PNG';
 
 function MainTitle() {
     return (
-        <StyledMainTitle>
-            <Styleda>AIR &nbsp; JORDAN.</Styleda>
-        </StyledMainTitle>
+        <MainTitleDiv>
+            <Title>
+                <img alt="" src={LogoText} />
+            </Title>
+        </MainTitleDiv>
     );
 }
-const StyledMainTitle = styled.div`
+const MainTitleDiv = styled.div`
     background-color: black;
-    color: white;
-    font-family: 'Monoton'; font-size: 3rem; letter-spacing: 5px;
+    font-family: 'Monoton'; font-size: 4rem; letter-spacing: 5px;
     text-align: center;
 `
-const Styleda = styled.a`
+const Title = styled.a`
     text-decoration-color : black;
 `
 export default MainTitle;
