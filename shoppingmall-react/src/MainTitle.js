@@ -4,14 +4,17 @@ import styled from 'styled-components';
 function MainTitle() {
     return (
         <StyledMainTitle>
-            <h1>AIR &nbsp; JORDAN.</h1>
+            <Styleda>AIR &nbsp; JORDAN.</Styleda>
         </StyledMainTitle>
     );
 }
 const StyledMainTitle = styled.div`
     background-color: black;
     color: white;
-    font-family: 'Monoton'; font-size: 2rem; letter-spacing: 5px;
+    font-family: 'Monoton'; font-size: 3rem; letter-spacing: 5px;
     text-align: center;
+`
+const Styleda = styled.a`
+    text-decoration-color : black;
 `
 export default MainTitle;
