@@ -15,7 +15,7 @@ function SubTotal() {
                         <p>
                             총액 ({basket.length} items) : <strong>{value}원</strong>
                         </p>
-                        <CheckBox className="subtotal_gift">
+                        <CheckBox>
                             <input type="checkbox" />&nbsp;주문 내용을 확인하였습니다.
                         </CheckBox>
                     </>

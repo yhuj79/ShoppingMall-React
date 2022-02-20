@@ -7,7 +7,7 @@ function Checkout() {
     const [{ basket }, dispatch] = useStateValue();
     return (
         <CheckoutDiv>
-            <div className="checkout_list">
+            <div>
                 <h2 className="checkout_title">Guest's Cart</h2>
                 {basket.map((item, uniqueID) => (
                     <ProductCheckout
@@ -30,10 +30,8 @@ const CheckoutDiv = styled.div`
     padding: 20px;
     margin: 20px; margin-left: 40px;
     border-radius: 15px;
-    width: 1230px; height: max-content;
-
-    .checkout_list {
-    }
+    width: 1250px; height: max-content;
+    
     .checkout_title {
         margin-right: 10px;
         padding: 10px;

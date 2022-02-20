@@ -11,8 +11,8 @@ import Product from './Product';
 function ProductList() {
     return (
         <ProductListDiv>
-            <div className='product_container'>
-                <div className='product_row'>
+            <div>
+                <div className="productlist_row">
                     <Product
                         id="0001"
                         image={require("./image/product/Jordan1_RetroHighOGUniversityBlue.png")}
@@ -49,7 +49,7 @@ function ProductList() {
                         price={2920000}
                     />
                 </div>
-                <div className='product_row'>
+                <div className="productlist_row">
                     <Product
                         id="0005"
                         image={require("./image/product/Jordan1_LowSEChocolateBliss.png")}
@@ -79,7 +79,7 @@ function ProductList() {
                         price={624000}
                     />
                 </div>
-                <div className='product_row'>
+                <div className="productlist_row">
                     <Product
                         id="0009"
                         image={require("./image/product/Jordan1_RetroHighOGPatentBred.png")}
@@ -119,9 +119,7 @@ const ProductListDiv = styled.div`
     position: relative;
     margin-left: auto; margin-right: auto; // 왼쪽 오른쪽 여백 균등
     
-    .product_container {
-    }
-    .product_row {
+    .productlist_row {
         display: flex;
         z-index: 1;
         margin-left: 5px; margin-right: 5px;

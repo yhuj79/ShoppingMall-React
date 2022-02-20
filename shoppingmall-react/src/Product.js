@@ -17,7 +17,7 @@ function Product({ id, image, category, title, price,
     const [{ basket }, dispatch] = useStateValue();
     const addToBasket = () => {
         dispatch({
-            type: 'ADD_TO_BASKET',
+            type: "ADD_TO_BASKET",
             item: {
                 id: addNextID.current += 1,
                 image: image,
@@ -118,40 +118,41 @@ function Product({ id, image, category, title, price,
                     }
                 }}
             >
-                <CartModalTop>
-                    <ProductImage alt="" src={image} />
-                    <div>
-                        <p>{category}</p>
-                        <p>{title}</p>
-                    </div>
-                    <p className="modal_price">
-                        <strong>{price.toLocaleString('en')}</strong>
-                        <small>원</small>
-                    </p>
-                </CartModalTop>
-                <CartModalBottom>
-                    <p className="modal_bottomtext">Cart에 추가</p>
-                    <CartModalBottomButton onClick={() => addToBasket(size = 250)}>250</CartModalBottomButton>
-                    <CartModalBottomButton onClick={() => addToBasket(size = 255)}>255</CartModalBottomButton>
-                    <CartModalBottomButton onClick={() => addToBasket(size = 260)}>260</CartModalBottomButton>
-                    <CartModalBottomButton onClick={() => addToBasket(size = 265)}>265</CartModalBottomButton>
-                    <CartModalBottomButton onClick={() => addToBasket(size = 270)}>270</CartModalBottomButton>
-                    <CartModalBottomButton onClick={() => addToBasket(size = 275)}>275</CartModalBottomButton>
-                    <CartModalBottomButton onClick={() => addToBasket(size = 280)}>280</CartModalBottomButton>
-                    <CartModalBottomButton onClick={() => addToBasket(size = 285)}>285</CartModalBottomButton>
-                    <CartModalBottomButton onClick={() => addToBasket(size = 290)}>290</CartModalBottomButton>
-                    <CartModalBottomButton onClick={() => addToBasket(size = 295)}>295</CartModalBottomButton>
-                    <CartModalBottomButton onClick={() => addToBasket(size = 300)}>300</CartModalBottomButton>
-                    <CartModalBottomButton onClick={() => addToBasket(size = 305)}>305</CartModalBottomButton>
-                    <CartModalBottomButton onClick={() => addToBasket(size = 310)}>310</CartModalBottomButton>
-                </CartModalBottom>
+                <div>
+                    <CartModalTop>
+                        <ProductImage alt="" src={image} />
+                        <div>
+                            <p>{category}</p>
+                            <p>{title}</p>
+                        </div>
+                        <p className="modal_price">
+                            <strong>{price.toLocaleString('en')}</strong>
+                            <small>원</small>
+                        </p>
+                    </CartModalTop>
+                    <CartModalBottom>
+                        <p className="modal_bottomtext">Cart에 추가</p>
+                        <CartModalBottomButton onClick={() => addToBasket(size = 250)}>250</CartModalBottomButton>
+                        <CartModalBottomButton onClick={() => addToBasket(size = 255)}>255</CartModalBottomButton>
+                        <CartModalBottomButton onClick={() => addToBasket(size = 260)}>260</CartModalBottomButton>
+                        <CartModalBottomButton onClick={() => addToBasket(size = 265)}>265</CartModalBottomButton>
+                        <CartModalBottomButton onClick={() => addToBasket(size = 270)}>270</CartModalBottomButton>
+                        <CartModalBottomButton onClick={() => addToBasket(size = 275)}>275</CartModalBottomButton>
+                        <CartModalBottomButton onClick={() => addToBasket(size = 280)}>280</CartModalBottomButton>
+                        <CartModalBottomButton onClick={() => addToBasket(size = 285)}>285</CartModalBottomButton>
+                        <CartModalBottomButton onClick={() => addToBasket(size = 290)}>290</CartModalBottomButton>
+                        <CartModalBottomButton onClick={() => addToBasket(size = 295)}>295</CartModalBottomButton>
+                        <CartModalBottomButton onClick={() => addToBasket(size = 300)}>300</CartModalBottomButton>
+                        <CartModalBottomButton onClick={() => addToBasket(size = 305)}>305</CartModalBottomButton>
+                        <CartModalBottomButton onClick={() => addToBasket(size = 310)}>310</CartModalBottomButton>
+                    </CartModalBottom>
+                </div>
             </CartModal>
 
         </ProductDiv>
     );
 }
-
-// Product css
+// Product CSS
 
 const ProductDiv = styled.div`
     display: flex;
@@ -197,7 +198,7 @@ const Category = styled.p`
     text-decoration: underline;
     text-underline-position: under;
 `
-// Cart Modal css
+// Cart Modal CSS
 
 const CartModalTop = styled.div`
     font-size: 20px; font-weight: 600;
@@ -227,7 +228,7 @@ const CartModalBottomButton = styled.button`
         font-weight: 600;
     }
 `
-// Info Modal css
+// Info Modal CSS
 
 const InfoTitle = styled.div`
     margin-top: 70px;

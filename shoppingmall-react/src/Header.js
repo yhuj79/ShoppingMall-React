@@ -11,37 +11,43 @@ import SearchIcon from '@material-ui/icons/Search';
 import ShoppingBasket from '@material-ui/icons/ShoppingBasket';
 import LogoImage from './image/LogoImage.jpg';
 import { useStateValue } from './StateProvider';
+import { auth } from './firebase';
 
 function Header() {
-    const [{ basket }, dispatch] = useStateValue();
+    const [{ basket, user }, dispatch] = useStateValue();
+    const handleAuthentication = () => {
+        if (user) {
+            auth.signOut(); // firebase에서 제공하는 메서드
+        }
+    }
     return (
         <HeaderDiv>
             <Link to="/">
-                <img alt='' className='header_logo' src={LogoImage} />
+                <img alt="" className="header_logo" src={LogoImage} />
             </Link>
-            <div className='header_search'>
-                <input className='header_searchInput' type='text' />
-                <SearchIcon className='header_searchIcon' />
+            <div className="header_search">
+                <input className="header_searchInput" type="text" />
+                <SearchIcon className="header_searchIcon" />
             </div>
-            <div className='header_nav'>
-                <div className='header_option'>
-                    <span className='header_optionLineOne'>안녕하세요!</span>
-                    <Link to="/login" className='homelogin'>
-                        <span className='header_optionLineTwo'>로그인하기</span>
+            <div className="header_nav">
+                <div className="header_option">
+                    <span className="header_optionLineOne">안녕하세요!</span>
+                    <Link to={!user && "/login"} className="homelogin">
+                        <span onClick={handleAuthentication} className="header_optionLineTwo">{user ? "로그아웃" : "로그인"}</span>
                     </Link>
                 </div>
-                <div className='header_option'>
-                    <span className='header_optionLineOne'>돌아가기</span>
-                    <span className='header_optionLineTwo'>주문내역</span>
+                <div className="header_option">
+                    <span className="header_optionLineOne">돌아가기</span>
+                    <span className="header_optionLineTwo">주문내역</span>
                 </div>
-                <div className='header_option'>
-                    <span className='header_optionLineOne'>Created by</span>
-                    <span className='header_optionLineTwo'>React</span>
+                <div className="header_option">
+                    <span className="header_optionLineOne">Created by</span>
+                    <span className="header_optionLineTwo">React</span>
                 </div>
                 <Link to="/checkout">
-                    <div className='header_optionBasket'>
+                    <div className="header_optionBasket">
                         <ShoppingBasket />
-                        <span className='header_optionLineTwoheader_basketCount'>
+                        <span className="header_BasketCount">
                             {basket?.length}{/* Optional Chaining */}
                         </span>
                     </div>
@@ -62,7 +68,6 @@ const HeaderDiv = styled.div`
     .header_logo {
         width: 150px;
         object-fit: contain; // 비율을 유지한 상태로 조정
-        border-radius: 100%;
         margin: 0 20px;
     }
     .header_search {
@@ -111,7 +116,7 @@ const HeaderDiv = styled.div`
         align-items: center;
         color: white;
     }
-    .header_optionLineTwoheader_basketCount {
+    .header_BasketCount {
         margin-left: 10px; margin-right: 10px;
     }
 `
