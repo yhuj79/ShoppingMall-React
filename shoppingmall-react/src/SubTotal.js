@@ -8,13 +8,13 @@ function SubTotal() {
     const [{ basket }, dispatch] = useStateValue();
     return (
         <SubTotalDiv>
-            <h2>장바구니 총합</h2>
+            <h2>Cart 총액</h2>
             <CurrencyFormat
                 renderText={(value) => (
                     <>
-                        <p>
-                            총액 ({basket.length} items) : <strong>{value}원</strong>
-                        </p>
+                        <h3>
+                            Item ( {basket.length} )&emsp;&emsp;<span>{value} 원</span>
+                        </h3>
                         <CheckBox>
                             <input type="checkbox" />&nbsp;주문 내용을 확인하였습니다.
                         </CheckBox>
@@ -24,7 +24,6 @@ function SubTotal() {
                 value={getBasketTotal(basket)}
                 displayType={"text"}
                 thousandSeparator={true}
-                prefix={"₩"}
             />
             <PayButton>결제하기</PayButton>
         </SubTotalDiv>
@@ -32,29 +31,41 @@ function SubTotal() {
 }
 const SubTotalDiv = styled.div`
     display: flex; flex-direction: column;
+    position: sticky; top: 100px; // 스크롤 영향 안 받게 고정
     background-color: #D5D5D5;
-    width: 350px;
-    height: 120px;
-    padding: 20px;
+    width: 430px; min-width: 430px;
+    height: 200px;
+    padding: 30px;
     margin: 20px;
     border-radius: 15px;
+
+    & > h2 {
+        margin-bottom: 30px;
+    }
+    & > h3 > span {
+        font-size: 2rem;
+    }
 `
 const CheckBox = styled.small`
     display: flex;
     align-items: center;
     width: 300px;
-    margin-top: 15px;
+    margin-top: 20px;
 
     .input {
         margin-right: 5px;
     }
 `
 const PayButton = styled.button`
-    background-color: #f0c14b;
+    background-color: #F2CB61;
     border-radius: 2px;
-    width: 100%; height: 30px;
+    width: 100%; height: 40px;
     border: 1px solid;
-    margin-top: 15px;
-    color: #111;
+    margin-top: 20px;
+    border-color: #CEA73D;
+
+    &:hover {
+        background: #E0B94F;
+    }
 `
 export default SubTotal;

@@ -41,8 +41,8 @@ const ProductCheckoutDiv = styled.div`
         }
     }
     .productcheckout_price {
-        width: 90px;
-        margin-left: 400px;
+        width: 100px;
+        margin-left: 390px;
     }
     .productcheckout_button {
         width: 50px;
@@ -53,6 +53,15 @@ const CartImage = styled.img`
     width: 150px;
 `
 const RemoveButton = styled.button`
+    width: 45px; height: 35px;
+    background-color: black;
+    color: white;
+    border-color: white; border-radius: 7px;
 
+    &:hover {
+        background-color: white; border-color: black;
+        color: black;
+        font-weight: 600;
+    }
 `
 export default ProductCheckout;

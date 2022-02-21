@@ -37,10 +37,10 @@ function Product({ id, image, category, title, price,
             <CartButton onClick={() => setCartModalIsOpen(true)}><ShoppingBasket /><p>Cart</p></CartButton>
             <div onClick={() => setInfoModalIsOpen(true)}>
                 <ProductImage alt="" src={image} />
-                <div className="product_info">
+                <div className="main_text">
                     <Category>{category}</Category>
                     <p>{title}</p>
-                    <p className="product_price">
+                    <p className="main_price">
                         <strong>{price.toLocaleString('en')}</strong>
                         <small>원</small>
                     </p>
@@ -164,13 +164,13 @@ const ProductDiv = styled.div`
     background-color: #D5D5D5;
     border-radius: 15px;
 
-    .product_info {
+    .main_text {
         height: 50px;
         font-weight: 500;
         margin-bottom: 15px;
         line-height: 1.5;
     }
-    .product_price {
+    .main_price {
         margin-top: 1px;
     }
 `

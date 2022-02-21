@@ -61,8 +61,7 @@ const HeaderDiv = styled.div`
     display: flex;
     align-items: center;
     background-color: black;
-    position: sticky;   // 스크롤을 내려도
-    top: 0;             // 상단에 고정
+    position: sticky; top: 0; // 스크롤 영향 안받게 고정
     z-index: 100;
 
     .header_logo {
