@@ -29,8 +29,10 @@ function ProductCheckout({ id, image, category, title, price }) {
 }
 const ProductCheckoutDiv = styled.div`
     display: flex;
-    padding: 20px;
-    border-top: 2px solid black;
+    padding: 20px; margin-bottom: 25px;
+    border-top: 1px solid black; border-bottom: 1px solid black;
+    border-top-left-radius: 15px; border-bottom-left-radius: 15px;
+    border-top-right-radius: 15px; border-bottom-right-radius: 15px;
     line-height: 95px;
 
     .productcheckout_title {

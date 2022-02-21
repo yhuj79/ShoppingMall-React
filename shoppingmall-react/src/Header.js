@@ -11,7 +11,7 @@ import SearchIcon from '@material-ui/icons/Search';
 import ShoppingBasket from '@material-ui/icons/ShoppingBasket';
 import LogoImage from './image/LogoImage.jpg';
 import { useStateValue } from './StateProvider';
-import { auth } from './firebase';
+import { auth } from './Firebase';
 
 function Header() {
     const [{ basket, user }, dispatch] = useStateValue();

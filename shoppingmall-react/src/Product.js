@@ -29,8 +29,8 @@ function Product({ id, image, category, title, price,
         setInfoModalIsOpen(false)
         setCartModalIsOpen(false)
     }
-    const [infomodalIsOpen, setInfoModalIsOpen] = useState(false);
-    const [cartmodalIsOpen, setCartModalIsOpen] = useState(false);
+    const [infoModalIsOpen, setInfoModalIsOpen] = useState(false);
+    const [cartModalIsOpen, setCartModalIsOpen] = useState(false);
     return (
         <ProductDiv>
             {/* Product - Main */}
@@ -47,8 +47,8 @@ function Product({ id, image, category, title, price,
                 </div>
             </div>
 
-            {/* Product - Click Infomation */}
-            <InfoModal closeTimeoutMS={400} ariaHideApp={false} isOpen={infomodalIsOpen}
+            {/* Product - Info Modal */}
+            <InfoModal closeTimeoutMS={400} ariaHideApp={false} isOpen={infoModalIsOpen}
                 style={{
                     overlay: {
                         backgroundColor: 'rgba(0, 0, 0, 1)'
@@ -91,12 +91,12 @@ function Product({ id, image, category, title, price,
                             <small>원</small>
                         </p>
                     </InfoUnder>
-                    <InfoCartButton onClick={() => setCartModalIsOpen(true)}><ShoppingBasket /><p>Cart</p></InfoCartButton>
+                    <InfoCartButton onClick={() => setCartModalIsOpen(true)}><ShoppingBasket /><p>&nbsp;Add To Cart</p></InfoCartButton>
                 </div>
             </InfoModal>
 
-            {/* Product - Click Cart */}
-            <CartModal closeTimeoutMS={400} ariaHideApp={false} isOpen={cartmodalIsOpen} onRequestClose={() => setCartModalIsOpen(false)}
+            {/* Product - Cart Modal */}
+            <CartModal closeTimeoutMS={400} ariaHideApp={false} isOpen={cartModalIsOpen} onRequestClose={() => setCartModalIsOpen(false)}
                 style={{
                     overlay: {
                         backgroundColor: 'rgba(0, 0, 0, 0.75)'
@@ -232,7 +232,7 @@ const CartModalBottomButton = styled.button`
 
 const InfoTitle = styled.div`
     margin-top: 70px;
-    color: white; font-size: 2rem; font-family: Righteous;
+    color: white; font-size: 2.5rem; font-family: Righteous;
 
     .info_KR {
         font-size: 1.2rem;
@@ -262,9 +262,10 @@ const BackImage = styled.img`
     }
 `
 const InfoCartButton = styled(CartButton)`
-    width: 100px; height: 100px;
+    display: flex; align-items: center;
+    width: 265px; height: 100px;
     font-size: 2rem;
-    margin-left: 1100px;
+    margin-left: 950px; padding: 20px;
 
     .MuiSvgIcon-root {
         font-size: 2rem;

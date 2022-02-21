@@ -8,7 +8,7 @@ function Checkout() {
     return (
         <CheckoutDiv>
             <div>
-                <h2 className="checkout_title">[ {user?.email} ] Shopping Cart ( {basket.length} item )</h2>
+                <h1 className="checkout_title">Shopping Cart ( {basket.length} item ) {user?.email}</h1>
                 {basket.map((item, uniqueID) => (
                     <ProductCheckout
                         id={item.id}
@@ -27,14 +27,14 @@ function Checkout() {
 const CheckoutDiv = styled.div`
     display: flex;
     background-color: #D5D5D5;
-    padding: 20px;
+    padding: 20px; padding-left: 30px; padding-right: 30px;
     margin: 20px; margin-left: 40px;
     border-radius: 15px;
     width: 1250px; height: max-content;
     
     .checkout_title {
-        margin-right: 10px;
-        padding: 10px;
+        font-family: Secular One;
+        margin-bottom: 10px; padding: 10px;
     }
 `
 export default Checkout;

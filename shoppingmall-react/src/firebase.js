@@ -9,7 +9,7 @@ const firebaseConfig = { // eslint-disable-line no-unused-vars
     storageBucket: "shoppingmall-react.appspot.com",
     messagingSenderId: "761473588348",
     appId: "1:761473588348:web:5408bc18a2666bf3d37df9",
-    measurementId: "G-68ZB3J0Q3Y"
+    measurementId: "G-68ZB3J0Q3Y",
 };
 // Use this to initialize the firebase App
 const firebaseApp = firebase.initializeApp(firebaseConfig);

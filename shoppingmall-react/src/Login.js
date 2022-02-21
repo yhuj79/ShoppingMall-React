@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import RegisterModal from 'react-modal';
 import { Link, useNavigate } from 'react-router-dom';
 import LoginLogo from './image/LoginLogo.PNG';
-import { auth } from './firebase';
+import { auth } from './Firebase';
 
 function Login() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const navigate = useNavigate();
+    const [regiModalIsOpen, setRegiModalIsOpen] = useState(false);
 
     const signIn = e => {
         e.preventDefault();
@@ -16,7 +18,7 @@ function Login() {
             .then(auth => {
                 navigate("/")
             })
-            .catch(error => alert(error.message()))
+            .catch(error => alert(error.message))
     }
     const register = e => {
         e.preventDefault();
@@ -27,7 +29,12 @@ function Login() {
                     navigate("/")
                 }
             })
-            .catch(error => alert(error.message()))
+            .catch(error => alert(error.message))
+    }
+    const regiClick = () => {
+        setEmail('')
+        setPassword('')
+        setRegiModalIsOpen(true)
     }
     return (
         <LoginDiv>
@@ -43,8 +50,43 @@ function Login() {
                     <input value={password} onChange={e => setPassword(e.target.value)} type="password" />
                     <LoginButton onClick={signIn}><h3>로그인</h3></LoginButton>
                 </form>
-                <RegiButton onClick={register}><h3>회원가입</h3></RegiButton>
+                <RegiButton onClick={regiClick}><h3>회원가입</h3></RegiButton>
             </LoginForm>
+
+            <RegisterModal closeTimeoutMS={400} ariaHideApp={false} isOpen={regiModalIsOpen} onRequestClose={() => setRegiModalIsOpen(false)}
+                style={{
+                    overlay: {
+                        backgroundColor: 'rgba(0, 0, 0, 0)'
+                    },
+                    content: {
+                        position: 'absolute',
+                        width: '630px', height: '600px',
+                        top: '50%',
+                        left: '50%',
+                        right: '40px',
+                        bottom: '40px',
+                        transform: 'translate(-50%, -50%)',
+                        border: 'none',
+                        background: '#D5D5D5',
+                        overflow: 'auto',
+                        WebkitOverflowScrolling: 'touch',
+                        borderRadius: '15px',
+                        outline: 'none',
+                        padding: '20px',
+                    }
+                }}
+            >
+                <LoginForm>
+                    <LoginTitle>REGISTER</LoginTitle>
+                    <form>
+                        <h3>신규 이메일</h3>
+                        <input value={email} onChange={e => setEmail(e.target.value)} type="text" />
+                        <h3>신규 비밀번호</h3>
+                        <input value={password} onChange={e => setPassword(e.target.value)} type="password" />
+                    </form>
+                    <RegiFinalButton onClick={register}><h3>회원가입</h3></RegiFinalButton>
+                </LoginForm>
+            </RegisterModal>
         </LoginDiv>
     );
 }
@@ -99,5 +141,8 @@ const RegiButton = styled(LoginButton)`
     &:hover {
         background: #D8D8D8;
     }
+`
+const RegiFinalButton = styled(LoginButton)`
+    margin-top : 50px;
 `
 export default Login;
