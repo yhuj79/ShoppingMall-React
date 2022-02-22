@@ -51,6 +51,8 @@ function Login() {
                 let errorCode = error.code;
                 if (errorCode === "auth/invalid-email") {
                     errorCode = "메일 형식이 올바르지 않습니다.";
+                } else if (errorCode === "auth/weak-password") {
+                    errorCode = "비밀번호는 6자 이상이어야 합니다.";
                 } else if (errorCode === "auth/user-not-found") {
                     errorCode = "이메일이 잘못 입력되었습니다.";
                 } else if (errorCode === "auth/wrong-password") {

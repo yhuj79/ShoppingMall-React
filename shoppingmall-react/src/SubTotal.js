@@ -27,7 +27,7 @@ function SubTotal() {
                 displayType={"text"}
                 thousandSeparator={true}
             />
-            <PayButton onClick={e => navigate("/payment")}>결제하기</PayButton>
+            <PayButton onClick={e => navigate("/payment")}>결제 창으로 이동</PayButton>
         </SubTotalDiv>
     );
 }
@@ -65,6 +65,7 @@ const PayButton = styled.button`
     border: 1px solid;
     margin-top: 20px;
     border-color: #CEA73D;
+    font-size: 1rem; font-weight: bold;
 
     &:hover {
         background: #E0B94F;
