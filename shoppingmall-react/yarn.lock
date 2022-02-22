@@ -5913,6 +5913,11 @@
     "locate-path" "^6.0.0"
     "path-exists" "^4.0.0"
 
+"firebase-error-translator@^1.0.1":
+  "integrity" "sha512-KOb3Xfk55h6hwKLr9IdIM51/6iNnuvrmzbh2GnEkPXToEqz9LtjLmAKqZCjJJbzRujLz38h3YaCyd8vfaM9SsQ=="
+  "resolved" "https://registry.npmjs.org/firebase-error-translator/-/firebase-error-translator-1.0.1.tgz"
+  "version" "1.0.1"
+
 "firebase-tools@^10.2.0":
   "integrity" "sha512-gp/pmL3fSGcX3eIK056s63DqKuz4mt0ppkCQLuF3mLHerIXWpz/lPiwmFo4nn8ndstV48iMCV08EcEsUhQW2NQ=="
   "resolved" "https://registry.npmjs.org/firebase-tools/-/firebase-tools-10.2.0.tgz"

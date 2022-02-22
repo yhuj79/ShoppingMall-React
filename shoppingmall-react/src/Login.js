@@ -6,10 +6,14 @@ import LoginLogo from './image/LoginLogo.PNG';
 import { auth } from './Firebase';
 
 function Login() {
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
     const navigate = useNavigate();
     const [regiModalIsOpen, setRegiModalIsOpen] = useState(false);
+
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+
+    const [LoginError, setLoginError] = useState("");
+    const [RegiError, setRegiError] = useState("");
 
     const signIn = e => {
         e.preventDefault();
@@ -18,7 +22,21 @@ function Login() {
             .then(auth => {
                 navigate("/")
             })
-            .catch(error => alert(error.message))
+            .catch((error) => {
+                let errorCode = error.code;
+                if (errorCode === "auth/invalid-email") {
+                    errorCode = "메일 형식이 올바르지 않습니다.";
+                } else if (errorCode === "auth/user-not-found") {
+                    errorCode = "이메일이 잘못 입력되었습니다.";
+                } else if (errorCode === "auth/wrong-password") {
+                    errorCode = "비밀번호가 잘못 입력되었습니다.";
+                } else if (errorCode === "auth/email-already-in-use") {
+                    errorCode = "이메일 주소가 사용 중입니다. 다른 이메일 주소를 시도하십시오.";
+                } else {
+                    errorCode = "로그인 실패. 다시 시도해 주세요.";
+                }
+                setLoginError(errorCode)
+            });
     }
     const register = e => {
         e.preventDefault();
@@ -29,7 +47,21 @@ function Login() {
                     navigate("/")
                 }
             })
-            .catch(error => alert(error.message))
+            .catch((error) => {
+                let errorCode = error.code;
+                if (errorCode === "auth/invalid-email") {
+                    errorCode = "메일 형식이 올바르지 않습니다.";
+                } else if (errorCode === "auth/user-not-found") {
+                    errorCode = "이메일이 잘못 입력되었습니다.";
+                } else if (errorCode === "auth/wrong-password") {
+                    errorCode = "비밀번호가 잘못 입력되었습니다.";
+                } else if (errorCode === "auth/email-already-in-use") {
+                    errorCode = "이메일 주소가 사용 중입니다. 다른 이메일 주소를 사용하십시오.";
+                } else {
+                    errorCode = "회원가입 실패. 다시 시도해 주세요.";
+                }
+                setRegiError(errorCode)
+            });
     }
     const regiClick = () => {
         setEmail('')
@@ -48,6 +80,7 @@ function Login() {
                     <input value={email} onChange={e => setEmail(e.target.value)} type="text" />
                     <h3>비밀번호</h3>
                     <input value={password} onChange={e => setPassword(e.target.value)} type="password" />
+                    {LoginError && <ErrorText key={LoginError}>{LoginError}</ErrorText>}
                     <LoginButton onClick={signIn}><h3>로그인</h3></LoginButton>
                 </form>
                 <RegiButton onClick={regiClick}><h3>회원가입</h3></RegiButton>
@@ -60,7 +93,7 @@ function Login() {
                     },
                     content: {
                         position: 'absolute',
-                        width: '630px', height: '600px',
+                        width: '730px', height: '600px',
                         top: '50%',
                         left: '50%',
                         right: '40px',
@@ -72,7 +105,8 @@ function Login() {
                         WebkitOverflowScrolling: 'touch',
                         borderRadius: '15px',
                         outline: 'none',
-                        padding: '20px',
+                        paddingTop: '0px',
+                        padding: '40px',
                     }
                 }}
             >
@@ -83,6 +117,7 @@ function Login() {
                         <input value={email} onChange={e => setEmail(e.target.value)} type="text" />
                         <h3>신규 비밀번호</h3>
                         <input value={password} onChange={e => setPassword(e.target.value)} type="password" />
+                        {RegiError && <ErrorText key={RegiError}>{RegiError}</ErrorText>}
                     </form>
                     <RegiFinalButton onClick={register}><h3>회원가입</h3></RegiFinalButton>
                 </LoginForm>
@@ -102,7 +137,7 @@ const Logo = styled.img`
 const LoginForm = styled.div`
     width: 500px;
     background-color: #D5D5D5;
-    margin: 40px; padding: 20px;
+    margin: 40px; padding: 70px; padding-top: 50px; padding-right: 75px;
     border-radius: 15px;
 
     & > form > h3 {
@@ -119,6 +154,32 @@ const LoginForm = styled.div`
 const LoginTitle = styled.h1`
     margin-bottom: 20px;
     font-family: Righteous;
+`
+const ErrorText = styled.p`
+    color: #FF0000;
+    font-weight: bold;
+    transition: all 1s;
+    @keyframes moveError {
+        0% {
+            transform: translateX(-1%);
+        }
+        20% {
+            transform: translateX(1%);
+        }
+        40% {
+            transform: translateX(-1%);
+        }
+        60% {
+            transform: translateX(1%);
+        }
+        80% {
+            transform: translateX(-1%);
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+    animation: moveError 0.3s ease-in-out;
 `
 const LoginButton = styled.button`
     background: #F2CB61;
@@ -143,6 +204,6 @@ const RegiButton = styled(LoginButton)`
     }
 `
 const RegiFinalButton = styled(LoginButton)`
-    margin-top : 50px;
+    margin-top : 15px;
 `
 export default Login;

@@ -1,70 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import ProductCheckout from './ProductCheckout';
 import { useStateValue } from './StateProvider';
 import { Link, useNavigate } from 'react-router-dom';
 import CurrencyFormat from 'react-currency-format';
 import { getBasketTotal } from './Reducer';
-import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
-import axios from "./axios";
-import { db } from "./Firebase";
+import { CardElement } from '@stripe/react-stripe-js';
 
 function Payment() {
     const [{ basket, user }, dispatch] = useStateValue();
     const navigate = useNavigate();
-    const stripe = useStripe();
-    const elements = useElements(true);
     const [error, setError] = useState(null);
-    const [disabled, setDisabled] = useState(true);
-    const [processing, setProcessing] = useState("");
-    const [succeeded, setSucceeded] = useState(false);
-    const [clientSecret, setClientSecret] = useState(true);
 
-    useEffect(() => {
-        const getClientSecret = async () => {
-            const response = await axios({
-                method: 'post',
-                url: "/payments/create?total=" + getBasketTotal(basket) * 100
-            });
-            setClientSecret(response.data.clientSecret)
-        }
-
-        getClientSecret();
-    }, [basket])
-
-    console.log('client 비밀은 다음과 같아요', clientSecret)
-    const handleSubmit = async (event) => {
-        event.preventDefault();
-        setProcessing(true);
-
-        const payload = await stripe.confirmCardPayment(clientSecret, {
-            payment_method: {
-                card: elements.getElement(CardElement)
-            }
-        }).then(({ paymentIntent }) => {
-            // payment 확인 및 정보
-            db
-                .collection('users')
-                .doc(user?.uid)
-                .collection('orders')
-                .doc(paymentIntent.id)
-                .set({
-                    basket: basket,
-                    amount: paymentIntent.amount,
-                    created: paymentIntent.created
-                })
-            // 초기값
-            setSucceeded(true);
-            setError(null)
-            setProcessing(false)
-            dispatch({
-                type: 'EMPTY_BASKET'
-            })
-            navigate.replace('/orders')
-        })
-    }
     const handleChange = event => {
-        setDisabled(event.empty);
         setError(event.error ? event.error.message : "");
     }
     return (
@@ -106,7 +54,7 @@ function Payment() {
                     <h3>결제</h3>
                 </Title>
                 <Details>
-                    <form onSubmit={handleSubmit}>
+                    <form>
                         <CardElement onChange={handleChange} />
                         <PriceContainer>
                             <CurrencyFormat
@@ -126,8 +74,8 @@ function Payment() {
                                 thousandSeparator={true}
                                 prefix={"₩ "}
                             />
-                            <button disabled={processing || disabled || succeeded}>
-                                <span>{processing ? <p>진행중...</p> : "결제하기"}</span>
+                            <button>
+                                <span>"결제하기"</span>
                             </button>
                         </PriceContainer>
                         {error && <div>{error}</div>}
