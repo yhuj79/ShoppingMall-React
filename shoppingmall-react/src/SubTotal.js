@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import CurrencyFormat from 'react-currency-format';
 import { useStateValue } from './StateProvider';
@@ -8,6 +8,26 @@ import { useNavigate } from 'react-router-dom';
 function SubTotal() {
     const [{ basket }, dispatch] = useStateValue();
     const navigate = useNavigate();
+    const [checkedInputs, setCheckedInputs] = useState([]);
+    const changeHandler = (checked, id) => {
+        if (checked) {
+            setCheckedInputs([...checkedInputs, id]);
+            console.log("주문 내용 확인 : check");
+        } else {
+            setCheckedInputs(checkedInputs.filter(el => el !== id));
+            console.log("주문 내용 확인 : none");
+        }
+    };
+    const isChecked = checkedInputs.length === 1;
+    const disabled = !isChecked;
+
+    const afterButton = {
+        backgroundColor: '#F2CB61',
+        '&:hover': {
+            backgroundColor: '#E0B94F',
+        },
+    }
+
     return (
         <SubTotalDiv>
             <h2>Cart 총액</h2>
@@ -18,7 +38,13 @@ function SubTotal() {
                             Item ( {basket.length} )&emsp;&emsp;<span>{value} 원</span>
                         </h3>
                         <CheckBox>
-                            <input type="checkbox" />&nbsp;주문 내용을 확인하였습니다.
+                            <input type="checkbox" id="check"
+                                onChange={e => {
+                                    changeHandler(e.currentTarget.checked, 'check');
+                                }}
+                                checked={checkedInputs.includes('check') ? true : false}
+                            />
+                            &nbsp;주문 내용을 확인하였습니다.
                         </CheckBox>
                     </>
                 )}
@@ -27,7 +53,17 @@ function SubTotal() {
                 displayType={"text"}
                 thousandSeparator={true}
             />
-            <PayButton onClick={e => navigate("/payment")}>결제 창으로 이동</PayButton>
+            <PayButton
+                disabled={disabled}
+                onClick={e => navigate("/payment")}
+                style={
+                    disabled
+                        ? { backgroundColor: '#B8B8B8' }
+                        : { afterButton }
+                }
+            >
+                결제 창으로 이동
+            </PayButton>
         </SubTotalDiv>
     );
 }
@@ -62,9 +98,8 @@ const PayButton = styled.button`
     background-color: #F2CB61;
     border-radius: 2px;
     width: 100%; height: 40px;
-    border: 1px solid;
+    border: 1px solid #828282;
     margin-top: 20px;
-    border-color: #CEA73D;
     font-size: 1rem; font-weight: bold;
 
     &:hover {
