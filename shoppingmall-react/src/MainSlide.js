@@ -38,5 +38,9 @@ const MainSlideDiv = styled.div`
     background-color: black;
     margin: 0 150px 0;
     padding: 5px 40px 20px;
+    @media screen and (max-width:767px) {
+        margin: 20px 0 20px;
+        padding: 0 0 0;
+    }
 `
 export default MainSlide;

@@ -31,18 +31,16 @@ function Header() {
             </div>
             <div className="header_nav">
                 <div className="header_option">
-                    <span className="header_optionLineOne">안녕하세요!</span>
+                    <span className="header_optionLineOne">{!user ? "Hello, Sign in" : user.email}</span>
                     <Link to={!user && "/login"} className="homelogin">
                         <span onClick={handleAuthentication} className="header_optionLineTwo">{user ? "로그아웃" : "로그인"}</span>
                     </Link>
                 </div>
-                <div className="header_option">
-                    <span className="header_optionLineOne">돌아가기</span>
-                    <span className="header_optionLineTwo">주문내역</span>
-                </div>
-                <div className="header_option">
-                    <span className="header_optionLineOne">Created by</span>
-                    <span className="header_optionLineTwo">React</span>
+                <div className="createbyreact">
+                    <a className="header_option" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
+                        <span className="header_optionLineOne">Created by</span>
+                        <span className="header_optionLineTwo">React</span>
+                    </a>
                 </div>
                 <Link to="/checkout">
                     <div className="header_optionBasket">
@@ -57,22 +55,22 @@ function Header() {
     );
 }
 const HeaderDiv = styled.div`
-    height: 75px;
+    height: 60px;
     display: flex;
     align-items: center;
     background-color: black;
     position: sticky; top: 0; // 스크롤 영향 안받게 고정
     z-index: 100;
-
     .header_logo {
         width: 150px;
         object-fit: contain; // 비율을 유지한 상태로 조정
-        margin: 0 20px;
+        margin-top: 10px; margin-left: 10px;
     }
     .header_search {
         display: flex;
         flex: 1;
         align-items: center;
+        margin-right: 5px;
         border-radius: 20px;
     }
     .header_searchInput {
@@ -95,15 +93,20 @@ const HeaderDiv = styled.div`
         flex-direction: column;
         margin-left: 12px;
         margin-right: 12px;
+        padding: 5px;
         color: #ffffff;
-
+        border: 1px solid #000000; border-radius: 5px;
+        text-decoration: none;
         .homelogin {
             text-decoration: none;
             color: white;
         }
+        &:hover {
+            border-color: #ffffff;
+        }
     }
     .header_optionLineOne {
-        font-size: 10px;
+        font-size: 12px;
     }
     .header_optionLineTwo {
         font-size: 13px;
@@ -113,10 +116,30 @@ const HeaderDiv = styled.div`
     .header_optionBasket {
         display: flex;
         align-items: center;
+        padding: 10px 5px 10px 10px;
+        margin-right: 3px;
         color: white;
+        border: 1px solid #000000; border-radius: 5px;
+        &:hover {
+            border-color: #ffffff;
+        }
     }
     .header_BasketCount {
         margin-left: 10px; margin-right: 10px;
+    }
+    @media screen and (max-width:767px) {
+        .header_logo {
+            display: block;
+            width: 120px;
+        }
+        .header_search {
+            display: none;
+        }
+        .createbyreact {
+            display: none;
+        }
+        .header_option {&:hover {border-color: #000000;}}
+        .header_optionBasket {&:hover {border-color: #000000;}}
     }
 `
 export default Header;

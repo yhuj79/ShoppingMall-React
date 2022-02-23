@@ -10,3 +10,8 @@
 .ReactModal__Overlay--before-close {
   opacity: 0;
 }
+@media screen and (max-width: 767px) {
+  .ReactModal__Content {
+    zoom: 0.5;
+  }
+}

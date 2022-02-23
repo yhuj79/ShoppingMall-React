@@ -162,8 +162,8 @@ const ProductDiv = styled.div`
     max-height: 400px;
     width: 350px;
     background-color: #D5D5D5;
+    border: 3px solid #7B7B7B;
     border-radius: 15px;
-
     .main_text {
         height: 50px;
         font-weight: 500;
@@ -181,7 +181,6 @@ const CartButton = styled.button`
     border-color: white; border-radius: 7px;
     position: absolute;
     margin-left: 300px;
-
     &:hover {
         background-color: white; border-color: black;
         color: black;
@@ -202,7 +201,6 @@ const Category = styled.p`
 
 const CartModalTop = styled.div`
     font-size: 20px; font-weight: 600;
-
     .modal_price{
         font-size: 25px;
         margin-top: 10px;
@@ -221,7 +219,6 @@ const CartModalBottomButton = styled.button`
     color: white; font-size: 18px;
     border-color: white; border-radius: 10px;
     margin: 7px;
-
     &:hover {
         background-color: white; border-color: black;
         color: black;
@@ -233,32 +230,42 @@ const CartModalBottomButton = styled.button`
 const InfoTitle = styled.div`
     margin-top: 70px;
     color: white; font-size: 2.5rem; font-family: Righteous;
-
     .info_KR {
         font-size: 1.2rem;
+    }
+    @media screen and (max-width: 767px) {
+        margin-left: 460px;
     }
 `
 const InfoImage = styled.img`
     object-fit: contain;
     width: 400px; height: 300px;
     margin-right: 15px;
+    @media screen and (max-width: 767px) {
+        margin-left: 460px;
+    }
 `
 const InfoUnder = styled.div`
     color: white; font-size: 1.2rem; font-family: Secular One;
     margin-top: 50px;
-
     .info_price {
         margin-top: 20px;
         font-size: 2rem;
+    }
+    @media screen and (max-width: 767px) {
+        margin-left: 460px;
     }
 `
 const BackImage = styled.img`
     width: 150px;
     opacity: 0.5;
     margin-left: 40px; margin-bottom: 300px;
-
     &:hover {
         opacity: 0.8;
+    }
+    @media screen and (max-width: 767px) {
+        width: 200px; margin: 0; margin-left: 800px;
+        display: flex;
     }
 `
 const InfoCartButton = styled(CartButton)`
@@ -266,9 +273,11 @@ const InfoCartButton = styled(CartButton)`
     width: 265px; height: 100px;
     font-size: 2rem;
     margin-left: 950px; padding: 20px;
-
     .MuiSvgIcon-root {
         font-size: 2rem;
+    }
+    @media screen and (max-width: 767px) {
+        margin-left: 750px;
     }
 `
 export default Product;

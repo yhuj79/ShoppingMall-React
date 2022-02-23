@@ -30,11 +30,15 @@ function ProductCheckout({ id, image, category, title, price }) {
 const ProductCheckoutDiv = styled.div`
     display: flex;
     padding: 20px; margin-bottom: 25px;
-    border-top: 1px solid black; border-bottom: 1px solid black;
-    border-top-left-radius: 15px; border-bottom-left-radius: 15px;
-    border-top-right-radius: 15px; border-bottom-right-radius: 15px;
+    border: 3px solid #B1B1B1; border-radius: 15px;
     line-height: 95px;
-
+    @media screen and (max-width:767px) {
+            display: inline-block;
+            line-height: 1.5;
+        }
+    &:hover {
+        background-color: #C3C3C3;
+    }
     .productcheckout_title {
         display: flex;
         width: 500px;
@@ -45,10 +49,17 @@ const ProductCheckoutDiv = styled.div`
     .productcheckout_price {
         width: 100px;
         margin-left: 390px;
+        @media screen and (max-width:767px) {
+            display: inline-block;
+            margin-left: 0;
+        }
     }
     .productcheckout_button {
         width: 50px;
         margin-left: 20px;
+        @media screen and (max-width:767px) {
+            margin-left: 0;
+        }
     }
 `
 const CartImage = styled.img`
@@ -59,7 +70,6 @@ const RemoveButton = styled.button`
     background-color: black;
     color: white;
     border-color: white; border-radius: 7px;
-
     &:hover {
         background-color: white; border-color: black;
         color: black;
