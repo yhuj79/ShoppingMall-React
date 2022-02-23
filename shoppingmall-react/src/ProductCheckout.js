@@ -32,13 +32,25 @@ const ProductCheckoutDiv = styled.div`
     padding: 20px; margin-bottom: 25px;
     border: 3px solid #B1B1B1; border-radius: 15px;
     line-height: 95px;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 68ed70657b5cc5280fbc6e49fc7df0c2f208bf2b
     @media screen and (max-width:767px) {
             display: inline-block;
             line-height: 1.5;
         }
+<<<<<<< HEAD
     &:hover {
         background-color: #C3C3C3;
     }
+=======
+
+    &:hover {
+        background-color: #C3C3C3;
+    }
+
+>>>>>>> 68ed70657b5cc5280fbc6e49fc7df0c2f208bf2b
     .productcheckout_title {
         display: flex;
         width: 500px;
@@ -49,6 +61,10 @@ const ProductCheckoutDiv = styled.div`
     .productcheckout_price {
         width: 100px;
         margin-left: 390px;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 68ed70657b5cc5280fbc6e49fc7df0c2f208bf2b
         @media screen and (max-width:767px) {
             display: inline-block;
             margin-left: 0;
@@ -57,6 +73,10 @@ const ProductCheckoutDiv = styled.div`
     .productcheckout_button {
         width: 50px;
         margin-left: 20px;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 68ed70657b5cc5280fbc6e49fc7df0c2f208bf2b
         @media screen and (max-width:767px) {
             margin-left: 0;
         }

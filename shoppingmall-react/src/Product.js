@@ -241,6 +241,10 @@ const InfoImage = styled.img`
     object-fit: contain;
     width: 400px; height: 300px;
     margin-right: 15px;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 68ed70657b5cc5280fbc6e49fc7df0c2f208bf2b
     @media screen and (max-width: 767px) {
         margin-left: 460px;
     }
@@ -252,6 +256,10 @@ const InfoUnder = styled.div`
         margin-top: 20px;
         font-size: 2rem;
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 68ed70657b5cc5280fbc6e49fc7df0c2f208bf2b
     @media screen and (max-width: 767px) {
         margin-left: 460px;
     }

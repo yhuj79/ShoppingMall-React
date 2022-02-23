@@ -265,6 +265,10 @@ const CheckBox = styled.small`
     align-items: center;
     width: 300px;
     margin-top: 10px;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 68ed70657b5cc5280fbc6e49fc7df0c2f208bf2b
     .input {
         margin-right: 5px;
     }

@@ -32,6 +32,10 @@ const CheckoutDiv = styled.div`
     margin: 20px; margin-left: 40px;
     border-radius: 15px;
     width: 1250px; height: max-content;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 68ed70657b5cc5280fbc6e49fc7df0c2f208bf2b
     @media screen and (max-width:767px) {
         width: 540px;
         margin-left: 15px;

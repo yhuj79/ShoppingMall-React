@@ -4162,7 +4162,7 @@
   dependencies:
     "json-parse-helpfulerror" "^1.0.3"
 
-"classnames@^2.2.5":
+"classnames@^2.2.5", "classnames@^2.2.6":
   "integrity" "sha512-OlQdbZ7gLfGarSqxesMesDa5uz7KFbID8Kpq/SxIoNGDqY8lSYs0D+hhtBXhcdB3rcbXArFr7vlHheLk1voeNA=="
   "resolved" "https://registry.npmjs.org/classnames/-/classnames-2.3.1.tgz"
   "version" "2.3.1"
@@ -4551,7 +4551,11 @@
     "path-type" "^4.0.0"
     "yaml" "^1.10.0"
 
+<<<<<<< HEAD
 "country-flag-icons@^1.4.10":
+=======
+"country-flag-icons@^1.0.2", "country-flag-icons@^1.4.10":
+>>>>>>> 68ed70657b5cc5280fbc6e49fc7df0c2f208bf2b
   "integrity" "sha512-bA9jDr+T5li7EsKdDx0xVnO0bdMdoT8IA3BNbeT2XSWUygR1okhiZ2+eYiC1EKLrFZhI4aEHni2w03lUlOjogg=="
   "resolved" "https://registry.npmjs.org/country-flag-icons/-/country-flag-icons-1.4.21.tgz"
   "version" "1.4.21"
@@ -7140,6 +7144,13 @@
   "resolved" "https://registry.npmjs.org/ini/-/ini-2.0.0.tgz"
   "version" "2.0.0"
 
+"input-format@^0.3.7":
+  "integrity" "sha512-hgwiCjV7MnhFvX4Hwrvk7hB2a2rcB2CQb7Ex7GlK1ISbEXuLtflwBUnadFSA1rVNDPFh9yWBaJJ4/o1XkzhPIg=="
+  "resolved" "https://registry.npmjs.org/input-format/-/input-format-0.3.7.tgz"
+  "version" "0.3.7"
+  dependencies:
+    "prop-types" "^15.7.2"
+
 "inquirer@^8.2.0":
   "integrity" "sha512-0crLweprevJ02tTuA6ThpoAERAGyVILC4sS74uib58Xf/zSr1/ZWtmm7D5CI+bSQEaA04f0K7idaHpQbSWgiVQ=="
   "resolved" "https://registry.npmjs.org/inquirer/-/inquirer-8.2.0.tgz"
@@ -8384,6 +8395,11 @@
     "prelude-ls" "~1.1.2"
     "type-check" "~0.3.2"
 
+"libphonenumber-js@^1.9.47":
+  "integrity" "sha512-/wEOIONcVboFky+lWlCaF7glm1FhBz11M5PHeCApA+xDdVfmhKjHktHS8KjyGxouV5CSXIr4f3GvLSpJa4qMSg=="
+  "resolved" "https://registry.npmjs.org/libphonenumber-js/-/libphonenumber-js-1.9.49.tgz"
+  "version" "1.9.49"
+
 "lie@~3.3.0":
   "integrity" "sha512-UaiMJzeWRlEujzAuw5LokY1L5ecNQYZKfmyZ9L7wDHb/p5etKaxXhohBcrw0EYby+G/NA52vRSN4N39dxHAIwQ=="
   "resolved" "https://registry.npmjs.org/lie/-/lie-3.3.0.tgz"
@@ -8582,6 +8598,11 @@
   "resolved" "https://registry.npmjs.org/lodash.once/-/lodash.once-4.1.1.tgz"
   "version" "4.1.1"
 
+"lodash.reduce@^4.6.0":
+  "integrity" "sha1-8atrg5KZrUj3hKu/R2WW8DuRTTs="
+  "resolved" "https://registry.npmjs.org/lodash.reduce/-/lodash.reduce-4.6.0.tgz"
+  "version" "4.6.0"
+
 "lodash.snakecase@^4.1.1":
   "integrity" "sha1-OdcUo1NXFHg3rv1ktdy7Fr7Nj40="
   "resolved" "https://registry.npmjs.org/lodash.snakecase/-/lodash.snakecase-4.1.1.tgz"
@@ -8591,6 +8612,11 @@
   "integrity" "sha1-7dFMgk4sycHgsKG0K7UhBRakJDg="
   "resolved" "https://registry.npmjs.org/lodash.sortby/-/lodash.sortby-4.7.0.tgz"
   "version" "4.7.0"
+
+"lodash.startswith@^4.2.1":
+  "integrity" "sha1-xZjErc4YiiflMUVzHNxsDnF3YAw="
+  "resolved" "https://registry.npmjs.org/lodash.startswith/-/lodash.startswith-4.2.1.tgz"
+  "version" "4.2.1"
 
 "lodash.union@^4.6.0":
   "integrity" "sha1-SLtQiECfFvGCFmZkHETdGqrjzYg="
@@ -10467,7 +10493,11 @@
     "strip-ansi" "^6.0.1"
     "text-table" "^0.2.0"
 
+<<<<<<< HEAD
 "react-dom@*", "react-dom@^0.14 || ^15.0.0-rc || ^15.0.0 || ^16.0.0-rc || ^16.0.0 || ^17.0.0", "react-dom@^0.14.0 || ^15.0.0 || ^16 || ^17", "react-dom@^0.14.0 || ^15.0.1 || ^16.0.0 || ^17.0.0", "react-dom@^16.8.0 || ^17.0.0", "react-dom@^17.0.0", "react-dom@^17.0.2", "react-dom@>= 16.8.0", "react-dom@>=16.6.0", "react-dom@>=16.8":
+=======
+"react-dom@*", "react-dom@^0.14 || ^15.0.0-rc || ^15.0.0 || ^16.0.0-rc || ^16.0.0 || ^17.0.0", "react-dom@^0.14.0 || ^15.0.0 || ^16 || ^17", "react-dom@^0.14.0 || ^15.0.1 || ^16.0.0 || ^17.0.0", "react-dom@^16.12.0 || ^17.0.0", "react-dom@^16.8.0 || ^17.0.0", "react-dom@^17.0.0", "react-dom@^17.0.2", "react-dom@>= 16.8.0", "react-dom@>=0.16.8", "react-dom@>=16.6.0", "react-dom@>=16.8":
+>>>>>>> 68ed70657b5cc5280fbc6e49fc7df0c2f208bf2b
   "integrity" "sha512-s4h96KtLDUQlsENhMn1ar8t2bEa+q/YAtj8pPPdIjPDGBDIVNsrD9aXNWqspUe6AzKCIG0C1HZZLqLV7qpOBGA=="
   "resolved" "https://registry.npmjs.org/react-dom/-/react-dom-17.0.2.tgz"
   "version" "17.0.2"
@@ -10510,6 +10540,29 @@
     "prop-types" "^15.7.2"
     "react-lifecycles-compat" "^3.0.0"
     "warning" "^4.0.3"
+
+"react-phone-input-2@^2.15.0":
+  "integrity" "sha512-60EOJSgmRFl9Ar89/JznaDsdB9FNf5T6nvQf0sN1t3X7exrKHbUT3ij7HZn2Y7jigcPv9EkdyzVr0MiOk1FKmw=="
+  "resolved" "https://registry.npmjs.org/react-phone-input-2/-/react-phone-input-2-2.15.0.tgz"
+  "version" "2.15.0"
+  dependencies:
+    "classnames" "^2.2.6"
+    "lodash.debounce" "^4.0.8"
+    "lodash.memoize" "^4.1.2"
+    "lodash.reduce" "^4.6.0"
+    "lodash.startswith" "^4.2.1"
+    "prop-types" "^15.7.2"
+
+"react-phone-number-input@^3.1.46":
+  "integrity" "sha512-afYl7BMy/0vMqWtzsZBmOgiPdqQAGyPO/Z3auorFs4K/zgFSBq3YoaASleodBkeRO/PygJ4ML8Wnb4Ce+3dlVQ=="
+  "resolved" "https://registry.npmjs.org/react-phone-number-input/-/react-phone-number-input-3.1.46.tgz"
+  "version" "3.1.46"
+  dependencies:
+    "classnames" "^2.2.5"
+    "country-flag-icons" "^1.0.2"
+    "input-format" "^0.3.7"
+    "libphonenumber-js" "^1.9.47"
+    "prop-types" "^15.7.2"
 
 "react-refresh@^0.11.0", "react-refresh@>=0.10.0 <1.0.0":
   "integrity" "sha512-F27qZr8uUqwhWZboondsPx8tnC3Ct3SxZA3V5WyEvujRyyNv0VYPhoBg1gZ8/MV5tubQp76Trw8lTv9hzRBa+A=="
@@ -10615,7 +10668,11 @@
     "loose-envify" "^1.4.0"
     "prop-types" "^15.6.2"
 
+<<<<<<< HEAD
 "react@*", "react@^0.14 || ^15.0.0-rc || ^15.0.0 || ^16.0.0-rc || ^16.0.0 || ^17.0.0", "react@^0.14.0 || ^15.0.0 || ^16 || ^17", "react@^0.14.0 || ^15.0.1 || ^16.0.0 || ^17.0.0", "react@^16.8.0 || ^17.0.0", "react@^17.0.0", "react@^17.0.2", "react@>= 16", "react@>= 16.8.0", "react@>=16.6.0", "react@>=16.8", "react@>=16.8.0", "react@17.0.2":
+=======
+"react@*", "react@^0.14 || ^15.0.0-rc || ^15.0.0 || ^16.0.0-rc || ^16.0.0 || ^17.0.0", "react@^0.14.0 || ^15.0.0 || ^16 || ^17", "react@^0.14.0 || ^15.0.1 || ^16.0.0 || ^17.0.0", "react@^16.12.0 || ^17.0.0", "react@^16.8.0 || ^17.0.0", "react@^17.0.0", "react@^17.0.2", "react@>= 16", "react@>= 16.8.0", "react@>=0.16.8", "react@>=16.6.0", "react@>=16.8", "react@>=16.8.0", "react@17.0.2":
+>>>>>>> 68ed70657b5cc5280fbc6e49fc7df0c2f208bf2b
   "integrity" "sha512-gnhPt75i/dq/z3/6q/0asP78D0u592D5L1pd7M8P+dck6Fu/jJeL6iVVK23fptSUZj8Vjf++7wXA8UNclGQcbA=="
   "resolved" "https://registry.npmjs.org/react/-/react-17.0.2.tgz"
   "version" "17.0.2"
