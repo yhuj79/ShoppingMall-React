@@ -19,5 +19,10 @@ function Page_Checkout() {
 }
 const PageCheckout = styled.div`
     display: flex;
+
+    @media screen and (max-width:767px) {
+        display: inline-block;
+        zoom: 0.5;
+    }
 `
 export default Page_Checkout;

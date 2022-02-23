@@ -8,6 +8,7 @@ import { useNavigate } from 'react-router-dom';
 function SubTotal() {
     const [{ basket }, dispatch] = useStateValue();
     const navigate = useNavigate();
+
     const [checkedInputs, setCheckedInputs] = useState([]);
     const changeHandler = (checked, id) => {
         if (checked) {
@@ -71,14 +72,16 @@ const SubTotalDiv = styled.div`
     display: flex; flex-direction: column;
     position: sticky; top: 100px; // 스크롤 영향 안 받게 고정
     background-color: #D5D5D5;
+    border: 3px solid #7B7B7B;
     width: 430px; min-width: 430px;
     height: 200px;
     padding: 30px;
-    margin: 20px;
+    margin: 20px 15px 20px;
     border-radius: 15px;
 
     & > h2 {
-        margin-bottom: 30px;
+        margin-bottom: 25px;
+        font-size: 1.7rem; font-family: Secular One;
     }
     & > h3 > span {
         font-size: 2rem;

@@ -8,7 +8,6 @@ import PageMain from './Page_Main';
 import PageCheckout from './Page_Checkout';
 import PageLogin from './Login';
 import PagePayment from './Page_Payment';
-import PageOrders from './Page_Orders';
 
 function App() {
   const [{ }, dispatch] = useStateValue();
@@ -33,7 +32,6 @@ function App() {
       <div className="App">
         <Routes>
           <Route path="/login" element={<PageLogin />} />
-          <Route path="/orders" element={<PageOrders />} />
           <Route path="/" element={<PageMain />} />
           <Route path="/checkout" element={<PageCheckout />} />
           <Route path="/payment" element={<PagePayment />} />

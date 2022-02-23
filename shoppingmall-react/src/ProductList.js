@@ -189,5 +189,12 @@ const ProductListDiv = styled.div`
         z-index: 1;
         margin-left: 5px; margin-right: 5px;
     }
+
+    @media screen and (max-width:767px) {
+        .productlist_row {
+            display: inline;
+            zoom: 0.7;
+        }
+    }
 `
 export default ProductList;

@@ -162,6 +162,7 @@ const ProductDiv = styled.div`
     max-height: 400px;
     width: 350px;
     background-color: #D5D5D5;
+    border: 3px solid #7B7B7B;
     border-radius: 15px;
 
     .main_text {
@@ -237,11 +238,18 @@ const InfoTitle = styled.div`
     .info_KR {
         font-size: 1.2rem;
     }
+    @media screen and (max-width: 767px) {
+        margin-left: 460px;
+    }
 `
 const InfoImage = styled.img`
     object-fit: contain;
     width: 400px; height: 300px;
     margin-right: 15px;
+
+    @media screen and (max-width: 767px) {
+        margin-left: 460px;
+    }
 `
 const InfoUnder = styled.div`
     color: white; font-size: 1.2rem; font-family: Secular One;
@@ -250,6 +258,10 @@ const InfoUnder = styled.div`
     .info_price {
         margin-top: 20px;
         font-size: 2rem;
+    }
+
+    @media screen and (max-width: 767px) {
+        margin-left: 460px;
     }
 `
 const BackImage = styled.img`
@@ -260,6 +272,10 @@ const BackImage = styled.img`
     &:hover {
         opacity: 0.8;
     }
+    @media screen and (max-width: 767px) {
+        width: 200px; margin: 0; margin-left: 800px;
+        display: flex;
+    }
 `
 const InfoCartButton = styled(CartButton)`
     display: flex; align-items: center;
@@ -269,6 +285,9 @@ const InfoCartButton = styled(CartButton)`
 
     .MuiSvgIcon-root {
         font-size: 2rem;
+    }
+    @media screen and (max-width: 767px) {
+        margin-left: 750px;
     }
 `
 export default Product;

@@ -1,0 +1,37 @@
+[debug] [2022-02-23T20:56:26.131Z] ----------------------------------------------------------------------
+[debug] [2022-02-23T20:56:26.132Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Master\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2022-02-23T20:56:26.133Z] CLI Version:   10.2.1
+[debug] [2022-02-23T20:56:26.133Z] Platform:      win32
+[debug] [2022-02-23T20:56:26.133Z] Node Version:  v17.0.1
+[debug] [2022-02-23T20:56:26.134Z] Time:          Thu Feb 24 2022 05:56:26 GMT+0900 (대한민국 표준시)
+[debug] [2022-02-23T20:56:26.134Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-02-23T20:56:26.187Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-02-23T20:56:26.188Z] > authorizing via signed-in user (yu108568@gmail.com)
+[debug] [2022-02-23T20:56:26.188Z] [iam] checking project shoppingmall-react for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-02-23T20:56:26.189Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/shoppingmall-react:testIamPermissions [none]
+[debug] [2022-02-23T20:56:26.190Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/shoppingmall-react:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-02-23T20:56:27.152Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/shoppingmall-react:testIamPermissions 200
+[debug] [2022-02-23T20:56:27.152Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/shoppingmall-react:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-02-23T20:56:27.153Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/shoppingmall-react/serviceAccounts/shoppingmall-react@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2022-02-23T20:56:27.153Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/shoppingmall-react/serviceAccounts/shoppingmall-react@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2022-02-23T20:56:28.027Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/shoppingmall-react/serviceAccounts/shoppingmall-react@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2022-02-23T20:56:28.027Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/shoppingmall-react/serviceAccounts/shoppingmall-react@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2022-02-23T20:56:28.028Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/shoppingmall-react [none]
+[debug] [2022-02-23T20:56:28.428Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/shoppingmall-react 200
+[debug] [2022-02-23T20:56:28.428Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/shoppingmall-react {"projectId":"shoppingmall-react","projectNumber":"761473588348","displayName":"shoppingmall-react","name":"projects/shoppingmall-react","resources":{"hostingSite":"shoppingmall-react","storageBucket":"shoppingmall-react.appspot.com","locationId":"us-central"},"state":"ACTIVE"}
+[info] 
+[info] === Deploying to 'shoppingmall-react'...
+[info] 
+[info] i  deploying functions, hosting 
+[debug] [2022-02-23T20:56:28.639Z] TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string. Received undefined
+    at new NodeError (node:internal/errors:371:5)
+    at validateString (node:internal/validators:119:11)
+    at Object.join (node:path:429:7)
+    at Config.path (C:\Users\Master\AppData\Roaming\npm\node_modules\firebase-tools\lib\config.js:115:45)
+    at getChildEnvironment (C:\Users\Master\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\lifecycleHooks.js:50:49)
+    at runTargetCommands (C:\Users\Master\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\lifecycleHooks.js:71:14)
+    at C:\Users\Master\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\lifecycleHooks.js:122:24
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[error] 
+[error] Error: An unexpected error has occurred.

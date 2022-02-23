@@ -36,7 +36,7 @@ function Header() {
                         <span onClick={handleAuthentication} className="header_optionLineTwo">{user ? "로그아웃" : "로그인"}</span>
                     </Link>
                 </div>
-                <div>
+                <div className="createbyreact">
                     <a className="header_option" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
                         <span className="header_optionLineOne">Created by</span>
                         <span className="header_optionLineTwo">React</span>
@@ -56,7 +56,6 @@ function Header() {
 }
 const HeaderDiv = styled.div`
     height: 60px;
-    min-width: 700px;
     display: flex;
     align-items: center;
     background-color: black;
@@ -130,6 +129,22 @@ const HeaderDiv = styled.div`
     }
     .header_BasketCount {
         margin-left: 10px; margin-right: 10px;
+    }
+
+    @media screen and (max-width:767px) {
+
+        .header_logo {
+            display: block;
+            width: 120px;
+        }
+        .header_search {
+            display: none;
+        }
+        .createbyreact {
+            display: none;
+        }
+        .header_option {&:hover {border-color: #000000;}}
+        .header_optionBasket {&:hover {border-color: #000000;}}
     }
 `
 export default Header;
