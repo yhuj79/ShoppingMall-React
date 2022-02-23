@@ -21,10 +21,5 @@ const MainTitleDiv = styled.div`
 `
 const Title = styled.a`
     text-decoration-color : black;
-<<<<<<< HEAD
-=======
-
->>>>>>> 68ed70657b5cc5280fbc6e49fc7df0c2f208bf2b
-    
 `
 export default MainTitle;

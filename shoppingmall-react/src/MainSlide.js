@@ -38,10 +38,7 @@ const MainSlideDiv = styled.div`
     background-color: black;
     margin: 0 150px 0;
     padding: 5px 40px 20px;
-<<<<<<< HEAD
-=======
-
->>>>>>> 68ed70657b5cc5280fbc6e49fc7df0c2f208bf2b
+    
     @media screen and (max-width:767px) {
         margin: 20px 0 20px;
         padding: 0 0 0;

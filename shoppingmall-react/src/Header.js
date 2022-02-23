@@ -97,10 +97,7 @@ const HeaderDiv = styled.div`
         color: #ffffff;
         border: 1px solid #000000; border-radius: 5px;
         text-decoration: none;
-<<<<<<< HEAD
-=======
-
->>>>>>> 68ed70657b5cc5280fbc6e49fc7df0c2f208bf2b
+        
         .homelogin {
             text-decoration: none;
             color: white;
@@ -124,10 +121,7 @@ const HeaderDiv = styled.div`
         margin-right: 3px;
         color: white;
         border: 1px solid #000000; border-radius: 5px;
-<<<<<<< HEAD
-=======
-
->>>>>>> 68ed70657b5cc5280fbc6e49fc7df0c2f208bf2b
+        
         &:hover {
             border-color: #ffffff;
         }
@@ -135,13 +129,8 @@ const HeaderDiv = styled.div`
     .header_BasketCount {
         margin-left: 10px; margin-right: 10px;
     }
-<<<<<<< HEAD
+    
     @media screen and (max-width:767px) {
-=======
-
-    @media screen and (max-width:767px) {
-
->>>>>>> 68ed70657b5cc5280fbc6e49fc7df0c2f208bf2b
         .header_logo {
             display: block;
             width: 120px;

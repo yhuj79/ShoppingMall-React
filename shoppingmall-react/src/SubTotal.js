@@ -102,10 +102,7 @@ const PayButton = styled.button`
     border: 1px solid #828282;
     margin-top: 20px;
     font-size: 1rem; font-weight: bold;
-<<<<<<< HEAD
-=======
-
->>>>>>> 68ed70657b5cc5280fbc6e49fc7df0c2f208bf2b
+    
     &:hover {
         background: #E0B94F;
     }

@@ -189,10 +189,7 @@ const ProductListDiv = styled.div`
         z-index: 1;
         margin-left: 5px; margin-right: 5px;
     }
-<<<<<<< HEAD
-=======
-
->>>>>>> 68ed70657b5cc5280fbc6e49fc7df0c2f208bf2b
+    
     @media screen and (max-width:767px) {
         .productlist_row {
             display: inline;

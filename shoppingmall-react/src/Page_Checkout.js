@@ -19,10 +19,7 @@ function Page_Checkout() {
 }
 const PageCheckout = styled.div`
     display: flex;
-<<<<<<< HEAD
-=======
-
->>>>>>> 68ed70657b5cc5280fbc6e49fc7df0c2f208bf2b
+    
     @media screen and (max-width:767px) {
         display: inline-block;
         zoom: 0.5;

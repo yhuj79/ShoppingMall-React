@@ -81,11 +81,7 @@ function Payment() {
             </Section>
             <CustomSection>
                 <Title>
-<<<<<<< HEAD
                     <h3 style={{ marginBottom: '30px' }}>상품 목록</h3>
-=======
-                    <h3>상품 목록</h3>
->>>>>>> 68ed70657b5cc5280fbc6e49fc7df0c2f208bf2b
                 </Title>
                 <Items>
                     {basket.map((item, uniqueID) => (
@@ -165,10 +161,7 @@ const PaymentDiv = styled.div`
     color: black;
     width: 1500px;
     margin: auto; // 중앙 정렬
-<<<<<<< HEAD
-=======
-
->>>>>>> 68ed70657b5cc5280fbc6e49fc7df0c2f208bf2b
+    
     @media screen and (max-width:767px) {
         zoom: 0.2;
     }
@@ -181,10 +174,7 @@ const BackLink = styled.h1`
     color: black;
     border-radius: 15px;
     border: 3px solid #CEA73D;
-<<<<<<< HEAD
-=======
-
->>>>>>> 68ed70657b5cc5280fbc6e49fc7df0c2f208bf2b
+    
     &:hover {
         background: #E0B94F;
     }
@@ -214,10 +204,7 @@ const Details = styled.div`
 const AddressSection = styled.div`
     display: flex;
     margin-top: 20px;
-<<<<<<< HEAD
-=======
-
->>>>>>> 68ed70657b5cc5280fbc6e49fc7df0c2f208bf2b
+    
     .MuiInputBase-input {
         padding: 3px !important;
     }
@@ -286,10 +273,7 @@ const CheckBox = styled.small`
     align-items: center;
     width: 400px;
     margin-top: 10px;
-<<<<<<< HEAD
-=======
-
->>>>>>> 68ed70657b5cc5280fbc6e49fc7df0c2f208bf2b
+    
     .input {
         margin-right: 5px;
     }
@@ -301,10 +285,7 @@ const PayButton = styled.button`
     margin-top: 20px;
     font-size: 1.3rem; font-weight: bold;
     border: 1px solid #828282;
-<<<<<<< HEAD
-=======
-
->>>>>>> 68ed70657b5cc5280fbc6e49fc7df0c2f208bf2b
+    
     &:hover {
         background: #E0B94F;
     }
