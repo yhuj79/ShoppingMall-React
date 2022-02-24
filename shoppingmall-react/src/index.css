@@ -10,10 +10,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  -webkit-text-size-adjust: 100%; /* Chrome, Safari, NewOpera */
-  -ms-text-size-adjust: 100%; /* IE */
-  -moz-text-size-adjust: 100%; /* FireFox */
-  -o-text-size-adjust: 100%; /* OldOpera */
+  -webkit-text-size-adjust: 45%; /* Chrome, Safari, NewOpera */
+  -ms-text-size-adjust: 45%; /* IE */
+  -moz-text-size-adjust: 45%; /* FireFox */
+  -o-text-size-adjust: 45%; /* NewOpera */
 
   background-color: black;
 }

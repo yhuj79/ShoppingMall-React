@@ -144,6 +144,13 @@ const HeaderDiv = styled.div`
         }
         .header_option {&:hover {border-color: #000000;}}
         .header_optionBasket {&:hover {border-color: #000000;}}
+
+        @media screen and (max-width:767px) {
+            -webkit-text-size-adjust: 80%; /* Chrome, Safari, NewOpera */
+            -ms-text-size-adjust: 80%; /* IE */
+            -moz-text-size-adjust: 80%; /* FireFox */
+            -o-text-size-adjust: 80%; /* NewOpera */
+        }
     }
 `
 export default Header;

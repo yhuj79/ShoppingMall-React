@@ -163,7 +163,7 @@ const PaymentDiv = styled.div`
     margin: auto; // 중앙 정렬
     
     @media screen and (max-width:767px) {
-        zoom: 0.2;
+        zoom: 0.25;
     }
 `
 const BackLink = styled.h1`
@@ -281,6 +281,11 @@ const CheckBox = styled.small`
     .input {
         margin-right: 5px;
     }
+
+    @media screen and (max-width:767px) {
+        zoom: 1.3;
+        width: 650px;
+    }
 `
 const PayButton = styled.button`
     background-color: #F2CB61;
@@ -292,6 +297,10 @@ const PayButton = styled.button`
     
     &:hover {
         background: #E0B94F;
+    }
+
+    @media screen and (max-width:767px) {
+        zoom: 1.3;
     }
 `
 export default Payment;

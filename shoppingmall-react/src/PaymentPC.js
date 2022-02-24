@@ -42,6 +42,15 @@ const ProductCheckoutDiv = styled.div`
         width: 100px;
         margin-left: 390px;
     }
+
+    @media screen and (max-width:767px) {
+        .productcheckout_title, .productcheckout_price {
+            -webkit-text-size-adjust: 20%; /* Chrome, Safari, NewOpera */
+            -ms-text-size-adjust: 20%; /* IE */
+            -moz-text-size-adjust: 20%; /* FireFox */
+            -o-text-size-adjust: 20%; /* NewOpera */
+        }
+    }
 `
 const CartImage = styled.img`
     width: 150px;
