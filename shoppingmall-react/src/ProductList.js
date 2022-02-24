@@ -192,7 +192,7 @@ const ProductListDiv = styled.div`
     
     @media screen and (max-width:767px) {
         .productlist_row {
-            display: inline;
+            display: inline-block;
             zoom: 0.7;
         }
     }

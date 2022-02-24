@@ -109,6 +109,7 @@ function Product({ id, image, category, title, price,
                         right: '40px',
                         bottom: '40px',
                         transform: 'translate(-50%, -50%)',
+                        border: '3px solid #7B7B7B',
                         background: '#D5D5D5',
                         overflow: 'auto',
                         WebkitOverflowScrolling: 'touch',
@@ -279,7 +280,7 @@ const InfoCartButton = styled(CartButton)`
         font-size: 2rem;
     }
     @media screen and (max-width: 767px) {
-        margin-left: 750px;
+        margin-left: 730px;
     }
 `
 export default Product;

@@ -230,6 +230,10 @@ const CardInput = styled.div`
     padding: 15px; margin-bottom: 15px;
     border-radius: 8px;
     border: 1px solid #C0C0C0;
+
+    @media screen and (max-width:767px) {
+        display: none;
+    }
 `
 const ErrorText = styled.p`
     color: #FF0000;

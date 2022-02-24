@@ -8,7 +8,7 @@ function Checkout() {
     return (
         <CheckoutDiv>
             <div>
-                <h1 className="checkout_title">{!user ? "Guest" : user?.email}'s&nbsp; Shopping Cart ( {basket.length} item )</h1>
+                <h1 className="checkout_title">{!user ? "Guest" : user?.email}'s<br />Shopping Cart ( {basket.length} item )</h1>
                 {basket.map((item, uniqueID) => (
                     <ProductCheckout
                         id={item.id}

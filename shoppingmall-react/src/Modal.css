@@ -14,4 +14,7 @@
   .ReactModal__Content {
     zoom: 0.5;
   }
+  .ReactModal__Content--after-open {
+    top: 43% !important;
+  }
 }

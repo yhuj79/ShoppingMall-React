@@ -79,5 +79,10 @@ const RemoveButton = styled.button`
         color: black;
         font-weight: 600;
     }
+
+    @media screen and (max-width:767px) {
+            width: 70px;
+            margin-top: 10px;
+        }
 `
 export default ProductCheckout;

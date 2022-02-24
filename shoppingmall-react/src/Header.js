@@ -134,6 +134,7 @@ const HeaderDiv = styled.div`
         .header_logo {
             display: block;
             width: 120px;
+            margin-bottom: 10px;
         }
         .header_search {
             display: none;
