@@ -38,7 +38,7 @@ function Header() {
                 </div>
                 <div className="createbyreact">
                     <a className="header_option" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-                        <span className="header_optionLineOne">Created by</span>
+                        <span className="header_optionLineOne">Created with</span>
                         <span className="header_optionLineTwo">React</span>
                     </a>
                 </div>
