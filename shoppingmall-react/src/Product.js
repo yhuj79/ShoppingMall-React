@@ -170,6 +170,13 @@ const ProductDiv = styled.div`
         font-weight: 500;
         margin-bottom: 15px;
         line-height: 1.5;
+
+        @media screen and (max-width:767px) {
+            -webkit-text-size-adjust: 60%; /* Chrome, Safari, NewOpera */
+            -ms-text-size-adjust: 60%; /* IE */
+            -moz-text-size-adjust: 60%; /* FireFox */
+            -o-text-size-adjust: 60%; /* NewOpera */
+        }
     }
     .main_price {
         margin-top: 1px;
@@ -186,6 +193,13 @@ const CartButton = styled.button`
         background-color: white; border-color: black;
         color: black;
         font-weight: 600;
+    }
+
+    @media screen and (max-width:767px) {
+        -webkit-text-size-adjust: 60%; /* Chrome, Safari, NewOpera */
+        -ms-text-size-adjust: 60%; /* IE */
+        -moz-text-size-adjust: 60%; /* FireFox */
+        -o-text-size-adjust: 60%; /* NewOpera */
     }
 `
 const ProductImage = styled.img`
