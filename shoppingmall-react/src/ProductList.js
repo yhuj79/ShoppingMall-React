@@ -184,6 +184,9 @@ const ProductListDiv = styled.div`
     position: relative;
     margin-left: auto; margin-right: auto; // 왼쪽 오른쪽 여백 균등
     
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        zoom: 0.4;
+    }
     .productlist_row {
         display: flex;
         z-index: 1;
@@ -193,6 +196,7 @@ const ProductListDiv = styled.div`
     @media screen and (max-width:767px) {
         .productlist_row {
             display: inline-block;
+            margin-left: 25px;
             zoom: 0.7;
         }
     }

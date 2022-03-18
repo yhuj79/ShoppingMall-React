@@ -162,6 +162,9 @@ const PaymentDiv = styled.div`
     width: 1500px;
     margin: auto; // 중앙 정렬
     
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        zoom: 0.6;
+    }
     @media screen and (max-width:767px) {
         zoom: 0.25;
     }
@@ -231,8 +234,12 @@ const CardInput = styled.div`
     border-radius: 8px;
     border: 1px solid #C0C0C0;
 
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        zoom: 1.7;
+    }
     @media screen and (max-width:767px) {
-        display: none;
+        zoom: 3.3;
+        width: 300px;
     }
 `
 const ErrorText = styled.p`

@@ -77,12 +77,12 @@ function Product({ id, image, category, title, price,
                         <p>{title}</p>
                         <p className="info_KR">{titleKR}</p>
                     </InfoTitle>
-                    <div>
+                    <InfoImageDiv>
                         <InfoImage alt="" src={subImageOne} />
                         <InfoImage alt="" src={subImageTwo} />
                         <InfoImage alt="" src={subImageThree} />
                         <BackImage onClick={() => setInfoModalIsOpen(false)} src={BackButtonWhite} alt="" />
-                    </div>
+                    </InfoImageDiv>
                     <InfoUnder>
                         <p>Color&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;-&emsp;{color}</p>
                         <p>Release date&emsp;-&emsp;{rdate}</p>
@@ -194,7 +194,7 @@ const CartButton = styled.button`
         color: black;
         font-weight: 600;
     }
-
+    
     @media screen and (max-width:767px) {
         -webkit-text-size-adjust: 60%; /* Chrome, Safari, NewOpera */
         -ms-text-size-adjust: 60%; /* IE */
@@ -248,8 +248,17 @@ const InfoTitle = styled.div`
     .info_KR {
         font-size: 1.2rem;
     }
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        margin-left: 600px;
+        zoom: 0.7;
+    }
     @media screen and (max-width: 767px) {
         margin-left: 460px;
+    }
+`
+const InfoImageDiv = styled.div`
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        margin-left: 400px;
     }
 `
 const InfoImage = styled.img`
@@ -257,6 +266,10 @@ const InfoImage = styled.img`
     width: 400px; height: 300px;
     margin-right: 15px;
     
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        margin-left: 0px;
+        zoom: 0.6;
+    }
     @media screen and (max-width: 767px) {
         margin-left: 460px;
     }
@@ -269,6 +282,11 @@ const InfoUnder = styled.div`
         font-size: 2rem;
     }
     
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        margin-left: 600px;
+        margin-top: -400px;
+        zoom: 0.7;
+    }
     @media screen and (max-width: 767px) {
         margin-left: 460px;
     }
@@ -279,6 +297,12 @@ const BackImage = styled.img`
     margin-left: 40px; margin-bottom: 300px;
     &:hover {
         opacity: 0.8;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        margin-left: 800px;
+        zoom: 0.7;
+        display: flex;
     }
     @media screen and (max-width: 767px) {
         width: 200px; margin: 0; margin-left: 800px;
@@ -292,6 +316,11 @@ const InfoCartButton = styled(CartButton)`
     margin-left: 950px; padding: 20px;
     .MuiSvgIcon-root {
         font-size: 2rem;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        margin-left: 600px;
+        zoom: 0.7;
     }
     @media screen and (max-width: 767px) {
         margin-left: 730px;

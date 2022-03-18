@@ -20,6 +20,10 @@ function Page_Checkout() {
 const PageCheckout = styled.div`
     display: flex;
     
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        display: inline-block;
+        zoom: 0.65;
+    }
     @media screen and (max-width:767px) {
         display: inline-block;
         zoom: 0.5;

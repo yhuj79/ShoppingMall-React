@@ -85,6 +85,10 @@ const SubTotalDiv = styled.div`
     & > h3 > span {
         font-size: 2rem;
     }
+
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        margin-left: 40px;
+    }
 `
 const CheckBox = styled.small`
     display: flex;

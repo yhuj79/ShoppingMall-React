@@ -29,7 +29,7 @@ function App() {
   }, []) // 한 번만 실행되도록 deps 설정
   return (
     <Router>
-      <div className="App">
+      <div className="app">
         <Routes>
           <Route path="/login" element={<PageLogin />} />
           <Route path="/" element={<PageMain />} />
