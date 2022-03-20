@@ -184,19 +184,28 @@ const ProductListDiv = styled.div`
     position: relative;
     margin-left: auto; margin-right: auto; // 왼쪽 오른쪽 여백 균등
     
-    @media screen and (min-width: 768px) and (max-width: 1023px) {
-        zoom: 0.4;
+    @media screen and (min-width: 768px) and (max-width: 1368px) {
+        text-align: center;
+    }
+    @media screen and (max-width:767px) {
+        text-align: center;
     }
     .productlist_row {
         display: flex;
         z-index: 1;
         margin-left: 5px; margin-right: 5px;
     }
+    @media screen and (min-width: 768px) and (max-width: 1368px) {
+        .productlist_row {
+            display: inline-block;
+            text-align: left;
+        }
+    }
     
     @media screen and (max-width:767px) {
         .productlist_row {
             display: inline-block;
-            margin-left: 25px;
+            text-align: left;
             zoom: 0.7;
         }
     }

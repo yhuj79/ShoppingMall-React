@@ -131,10 +131,16 @@ const HeaderDiv = styled.div`
     }
     
     @media screen and (max-width:767px) {
+
+        justify-content: center;
+
         .header_logo {
             display: block;
             width: 120px;
             margin-bottom: 10px;
+        }
+        .header_nav {
+            text-align: left;
         }
         .header_search {
             display: none;

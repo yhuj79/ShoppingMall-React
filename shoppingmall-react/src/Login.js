@@ -179,10 +179,10 @@ const LoginDiv = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+
     @media screen and (max-width: 767px) {
-        
-    zoom: 0.5;
-}
+        zoom: 0.5;
+    }
 `
 const Logo = styled.img`
     width: 500px;
@@ -268,6 +268,10 @@ const CheckBox = styled.small`
     
     .input {
         margin-right: 5px;
+    }
+    
+    @media screen and (min-width: 768px) and (max-width: 1368px) {
+        zoom: 1.2;
     }
 `
 const RegiButton = styled(LoginButton)`

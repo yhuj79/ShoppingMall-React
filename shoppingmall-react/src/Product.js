@@ -227,6 +227,12 @@ const CartModalBottom = styled.div`
         margin-bottom: 10px;
         font-size: 25px; font-weight: 600;
     }
+
+    @media screen and (min-width: 768px) and (max-width: 1368px) {
+        .modal_bottomtext {
+            font-size: 15px;
+        }
+    }
 `
 const CartModalBottomButton = styled.button`
     width: 60px; height: 40px;
@@ -239,6 +245,11 @@ const CartModalBottomButton = styled.button`
         color: black;
         font-weight: 600;
     }
+
+    @media screen and (min-width: 768px) and (max-width: 1368px) {
+        width: 100px;
+        height: 60px;
+    }
 `
 // Info Modal CSS
 
@@ -248,28 +259,19 @@ const InfoTitle = styled.div`
     .info_KR {
         font-size: 1.2rem;
     }
-    @media screen and (min-width: 768px) and (max-width: 1023px) {
-        margin-left: 600px;
-        zoom: 0.7;
-    }
+    
     @media screen and (max-width: 767px) {
         margin-left: 460px;
     }
 `
 const InfoImageDiv = styled.div`
-    @media screen and (min-width: 768px) and (max-width: 1023px) {
-        margin-left: 400px;
-    }
+    
 `
 const InfoImage = styled.img`
     object-fit: contain;
     width: 400px; height: 300px;
     margin-right: 15px;
     
-    @media screen and (min-width: 768px) and (max-width: 1023px) {
-        margin-left: 0px;
-        zoom: 0.6;
-    }
     @media screen and (max-width: 767px) {
         margin-left: 460px;
     }
@@ -282,11 +284,6 @@ const InfoUnder = styled.div`
         font-size: 2rem;
     }
     
-    @media screen and (min-width: 768px) and (max-width: 1023px) {
-        margin-left: 600px;
-        margin-top: -400px;
-        zoom: 0.7;
-    }
     @media screen and (max-width: 767px) {
         margin-left: 460px;
     }
@@ -299,11 +296,6 @@ const BackImage = styled.img`
         opacity: 0.8;
     }
 
-    @media screen and (min-width: 768px) and (max-width: 1023px) {
-        margin-left: 800px;
-        zoom: 0.7;
-        display: flex;
-    }
     @media screen and (max-width: 767px) {
         width: 200px; margin: 0; margin-left: 800px;
         display: flex;
@@ -317,10 +309,12 @@ const InfoCartButton = styled(CartButton)`
     .MuiSvgIcon-root {
         font-size: 2rem;
     }
-
-    @media screen and (min-width: 768px) and (max-width: 1023px) {
-        margin-left: 600px;
-        zoom: 0.7;
+    
+    @media screen and (min-width: 768px) and (max-width: 1368px) {
+        -webkit-text-size-adjust: 60%; /* Chrome, Safari, NewOpera */
+        -ms-text-size-adjust: 60%; /* IE */
+        -moz-text-size-adjust: 60%; /* FireFox */
+        -o-text-size-adjust: 60%; /* NewOpera */
     }
     @media screen and (max-width: 767px) {
         margin-left: 730px;
