@@ -11,6 +11,7 @@ import PagePayment from './Page_Payment';
 
 function App() {
   const [{ }, dispatch] = useStateValue();
+
   useEffect(() => {
     auth.onAuthStateChanged(authUser => {
       console.log(authUser);
@@ -26,7 +27,8 @@ function App() {
         })
       }
     })
-  }, []) // 한 번만 실행되도록 deps 설정
+  }, []) // deps
+
   return (
     <Router>
       <div className="app">

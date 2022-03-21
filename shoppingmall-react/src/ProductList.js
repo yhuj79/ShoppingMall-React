@@ -6,14 +6,14 @@
  */
 import React from 'react';
 import styled from 'styled-components';
-import Product from './Product';
+import MainProduct from './MainProduct';
 
 function ProductList() {
     return (
         <ProductListDiv>
             <div>
                 <div className="productlist_row">
-                    <Product
+                    <MainProduct
                         id="0001"
                         image={require("./image/product/Jordan1_RetroHighOGUniversityBlue.png")}
                         subImageOne={require("./image/product/img_sub/0101.jpg")}
@@ -26,7 +26,7 @@ function ProductList() {
                         rdate="2021.03.06."
                         price={606000}
                     />
-                    <Product
+                    <MainProduct
                         id="0002"
                         image={require("./image/product/Jordan1_MidLightSmokeGrey.png")}
                         subImageOne={require("./image/product/img_sub/0201.jpg")}
@@ -34,12 +34,12 @@ function ProductList() {
                         subImageThree={require("./image/product/img_sub/0203.jpg")}
                         category="Jordan 1"
                         title="Mid Light Smoke Grey"
-                        titleKR=" 미드 라이트 스모크 그레이"
+                        titleKR="미드 라이트 스모크 그레이"
                         color="LIGHT SMOKE GREY / BLACK-WHITE"
                         rdate="2020.01.11."
                         price={695000}
                     />
-                    <Product
+                    <MainProduct
                         id="0003"
                         image={require("./image/product/Jordan6_RetroCarmine2021.png")}
                         subImageOne={require("./image/product/img_sub/0301.jpg")}
@@ -52,7 +52,7 @@ function ProductList() {
                         rdate="2021.02.08."
                         price={269000}
                     />
-                    <Product
+                    <MainProduct
                         id="0004"
                         image={require("./image/product/Jordan1_TravisScottxFragmentRetroLowOGSPMilitaryBlue.png")}
                         subImageOne={require("./image/product/img_sub/0401.jpg")}
@@ -67,7 +67,7 @@ function ProductList() {
                     />
                 </div>
                 <div className="productlist_row">
-                    <Product
+                    <MainProduct
                         id="0005"
                         image={require("./image/product/Jordan1_LowSEChocolateBliss.png")}
                         subImageOne={require("./image/product/img_sub/0501.jpg")}
@@ -80,7 +80,7 @@ function ProductList() {
                         rdate="2021.12.15."
                         price={279000}
                     />
-                    <Product
+                    <MainProduct
                         id="0006"
                         image={require("./image/product/Jordan11_RetroCoolGrey2021.png")}
                         subImageOne={require("./image/product/img_sub/0601.jpg")}
@@ -93,7 +93,7 @@ function ProductList() {
                         rdate="2021.12.11."
                         price={295000}
                     />
-                    <Product
+                    <MainProduct
                         id="0007"
                         image={require("./image/product/Jordan1_RetroHighOGBlackMocha.png")}
                         subImageOne={require("./image/product/img_sub/0701.jpg")}
@@ -106,7 +106,7 @@ function ProductList() {
                         rdate="2020.11.13."
                         price={786000}
                     />
-                    <Product
+                    <MainProduct
                         id="0008"
                         image={require("./image/product/Jordan1_LowGolfChicago.png")}
                         subImageOne={require("./image/product/img_sub/0801.jpg")}
@@ -121,7 +121,7 @@ function ProductList() {
                     />
                 </div>
                 <div className="productlist_row">
-                    <Product
+                    <MainProduct
                         id="0009"
                         image={require("./image/product/Jordan1_RetroHighOGPatentBred.png")}
                         subImageOne={require("./image/product/img_sub/0901.jpg")}
@@ -134,7 +134,7 @@ function ProductList() {
                         rdate="2021.12.23."
                         price={289000}
                     />
-                    <Product
+                    <MainProduct
                         id="0010"
                         image={require("./image/product/Jordan2_Off-WhiteRetroLowSPWhiteandVarsityRed.png")}
                         subImageOne={require("./image/product/img_sub/1001.jpg")}
@@ -147,7 +147,7 @@ function ProductList() {
                         rdate="2021.11.12."
                         price={1290000}
                     />
-                    <Product
+                    <MainProduct
                         id="0011"
                         image={require("./image/product/Jordan1_DiorHighOG.png")}
                         subImageOne={require("./image/product/img_sub/1101.jpg")}
@@ -160,7 +160,7 @@ function ProductList() {
                         rdate="2020.07.08."
                         price={12400000}
                     />
-                    <Product
+                    <MainProduct
                         id="0012"
                         image={require("./image/product/Jordan4_RetroCrimson.png")}
                         subImageOne={require("./image/product/img_sub/1201.jpg")}
@@ -174,6 +174,60 @@ function ProductList() {
                         price={336000}
                     />
                 </div>
+                <div className="productlist_row">
+                    <MainProduct
+                        id="0013"
+                        image={require("./image/product/Jordan3_RetroSeoul.png")}
+                        subImageOne={require("./image/product/img_sub/1301.jpg")}
+                        subImageTwo={require("./image/product/img_sub/1302.jpg")}
+                        subImageThree={require("./image/product/img_sub/1303.jpg")}
+                        category="Jordan 3"
+                        title="Retro Seoul"
+                        titleKR="레트로 서울"
+                        color="WHITE / SOAR-ATOM RED"
+                        rdate="2021.03.11."
+                        price={1890000}
+                    />
+                    <MainProduct
+                        id="0014"
+                        image={require("./image/product/Jordan4_ParisSaint-GermainRetroNeutralGreyBordeaux.png")}
+                        subImageOne={require("./image/product/img_sub/1401.png")}
+                        subImageTwo={require("./image/product/img_sub/1402.jpg")}
+                        subImageThree={require("./image/product/img_sub/1403.jpg")}
+                        category="Jordan 4 x Paris Saint-Germain"
+                        title="Retro Neutral Grey Bordeaux"
+                        titleKR="조던 4 x 파리 생제르맹 레트로 뉴트럴 그레이 보르도"
+                        color="WHITE / NEUTRAL GREY / BLACK / BORDEAUX"
+                        rdate="2020.10.10."
+                        price={549000}
+                    />
+                    <MainProduct
+                        id="0015"
+                        image={require("./image/product/Jordan1_MidEquality2019.png")}
+                        subImageOne={require("./image/product/img_sub/1501.jpeg")}
+                        subImageTwo={require("./image/product/img_sub/1502.jpg")}
+                        subImageThree={require("./image/product/img_sub/1503.jpg")}
+                        category="Jordan 1"
+                        title="Mid Equality 2019"
+                        titleKR="미드 이퀄리티 2019"
+                        color="BLACK / BLACK-SAIL-WOLF GREY"
+                        rdate="2019.01.22."
+                        price={1049000}
+                    />
+                    <MainProduct
+                        id="0016"
+                        image={require("./image/product/Jordan1_RetroHighNouveauDunkFromAbove.png")}
+                        subImageOne={require("./image/product/img_sub/1601.jpg")}
+                        subImageTwo={require("./image/product/img_sub/1602.jpg")}
+                        subImageThree={require("./image/product/img_sub/1603.jpg")}
+                        category="Jordan 1"
+                        title="Retro High Nouveau Dunk From Above"
+                        titleKR="레트로 누보 덩크 프롬 어보브"
+                        color="WOLF GREY / GOLD LEAF-FRENCH BLUE-WHITE"
+                        rdate="2016.01.10."
+                        price={550000}
+                    />
+                </div>
             </div>
         </ProductListDiv>
     );
@@ -184,18 +238,15 @@ const ProductListDiv = styled.div`
     position: relative;
     margin-left: auto; margin-right: auto; // 왼쪽 오른쪽 여백 균등
     
-    @media screen and (min-width: 768px) and (max-width: 1368px) {
-        text-align: center;
-    }
-    @media screen and (max-width:767px) {
-        text-align: center;
-    }
     .productlist_row {
         display: flex;
         z-index: 1;
         margin-left: 5px; margin-right: 5px;
     }
+
     @media screen and (min-width: 768px) and (max-width: 1368px) {
+        text-align: center;
+
         .productlist_row {
             display: inline-block;
             text-align: left;
@@ -203,6 +254,8 @@ const ProductListDiv = styled.div`
     }
     
     @media screen and (max-width:767px) {
+        text-align: center;
+
         .productlist_row {
             display: inline-block;
             text-align: left;

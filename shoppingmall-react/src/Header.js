@@ -17,9 +17,10 @@ function Header() {
     const [{ basket, user }, dispatch] = useStateValue();
     const handleAuthentication = () => {
         if (user) {
-            auth.signOut(); // firebase에서 제공하는 메서드
+            auth.signOut(); // firebase method
         }
     }
+
     return (
         <HeaderDiv>
             <Link to="/">
@@ -61,6 +62,7 @@ const HeaderDiv = styled.div`
     background-color: black;
     position: sticky; top: 0; // 스크롤 영향 안받게 고정
     z-index: 100;
+
     .header_logo {
         width: 150px;
         object-fit: contain; // 비율을 유지한 상태로 조정
@@ -79,10 +81,14 @@ const HeaderDiv = styled.div`
         border: none;
         width: 100%;
     }
+    .header_searchInput:focus {
+        outline: none;
+    }
     .header_searchIcon {
         background-color: #F2CB61;
         padding: 5px;
         height: 25px;
+        margin-left: -3px;
     }
     .header_nav {
         display: flex;
@@ -131,7 +137,6 @@ const HeaderDiv = styled.div`
     }
     
     @media screen and (max-width:767px) {
-
         justify-content: center;
 
         .header_logo {
@@ -151,12 +156,10 @@ const HeaderDiv = styled.div`
         .header_option {&:hover {border-color: #000000;}}
         .header_optionBasket {&:hover {border-color: #000000;}}
 
-        @media screen and (max-width:767px) {
-            -webkit-text-size-adjust: 90%; /* Chrome, Safari, NewOpera */
-            -ms-text-size-adjust: 90%; /* IE */
-            -moz-text-size-adjust: 90%; /* FireFox */
-            -o-text-size-adjust: 90%; /* NewOpera */
-        }
+        -webkit-text-size-adjust: 90%; /* Chrome, Safari, NewOpera */
+        -ms-text-size-adjust: 90%; /* IE */
+        -moz-text-size-adjust: 90%; /* FireFox */
+        -o-text-size-adjust: 90%; /* NewOpera */
     }
 `
 export default Header;

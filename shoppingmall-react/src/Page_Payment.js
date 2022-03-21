@@ -19,5 +19,4 @@ function Page_Payment(props) {
         </div>
     );
 }
-
 export default Page_Payment;

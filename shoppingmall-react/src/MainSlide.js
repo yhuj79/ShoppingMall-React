@@ -39,6 +39,10 @@ const MainSlideDiv = styled.div`
     margin: 0 150px 0;
     padding: 5px 40px 20px;
     
+    @media screen and (min-width: 768px) and (max-width: 1368px) {
+        margin: 20px 0 20px;
+        padding: 0 0 0;
+    }
     @media screen and (max-width:767px) {
         margin: 20px 0 20px;
         padding: 0 0 0;

@@ -40,7 +40,7 @@ function Login() {
     }
     const register = e => {
         e.preventDefault();
-        // firebase에서 제공하는 메서드
+        // firebase method
         auth.createUserWithEmailAndPassword(email, password)
             .then((auth) => {
                 if (auth) {
@@ -74,10 +74,10 @@ function Login() {
     const changeHandler = (checked, id) => {
         if (checked) {
             setCheckedInputs([...checkedInputs, id]);
-            console.log("약관 확인 : check");
+            // console.log("약관 확인 : check");
         } else {
             setCheckedInputs(checkedInputs.filter(el => el !== id));
-            console.log("약관 확인 : none");
+            // console.log("약관 확인 : none");
         }
     };
     const isChecked = checkedInputs.length === 1;
@@ -89,6 +89,7 @@ function Login() {
             backgroundColor: '#E0B94F',
         },
     }
+
     return (
         <LoginDiv>
             <Link to="/">

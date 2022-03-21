@@ -30,7 +30,7 @@ const ProductCheckoutDiv = styled.div`
     padding: 20px; margin-bottom: 25px;
     border: 3px solid #B1B1B1; border-radius: 15px;
     line-height: 95px;
-    
+
     .productcheckout_title {
         display: flex;
         width: 500px;
@@ -43,6 +43,20 @@ const ProductCheckoutDiv = styled.div`
         margin-left: 390px;
     }
 
+    @media screen and (min-width: 768px) and (max-width: 1368px) {
+        display: inline-block;
+        line-height: 1.5;
+        width: 980px;
+
+        .productcheckout_title {
+            width: 950px;
+        }
+        .productcheckout_price {
+            display: inline-block;
+            margin-left: 0;
+            width: 950px;
+        }
+    }
     @media screen and (max-width:767px) {
         .productcheckout_title, .productcheckout_price {
             -webkit-text-size-adjust: 20%; /* Chrome, Safari, NewOpera */

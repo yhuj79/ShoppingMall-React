@@ -123,16 +123,16 @@ function Product({ id, image, category, title, price,
                     <CartModalTop>
                         <ProductImage alt="" src={image} />
                         <div>
-                            <p>{category}</p>
-                            <p>{title}</p>
+                            <p className="cart_category">{category}</p>
+                            <p className="cart_title">{title}</p>
                         </div>
-                        <p className="modal_price">
+                        <p className="cart_price">
                             <strong>{price.toLocaleString('en')}</strong>
                             <small>원</small>
                         </p>
                     </CartModalTop>
                     <CartModalBottom>
-                        <p className="modal_bottomtext">Cart에 추가</p>
+                        <p className="cart_bottomtext">Cart에 추가</p>
                         <CartModalBottomButton onClick={() => addToBasket(size = 250)}>250</CartModalBottomButton>
                         <CartModalBottomButton onClick={() => addToBasket(size = 255)}>255</CartModalBottomButton>
                         <CartModalBottomButton onClick={() => addToBasket(size = 260)}>260</CartModalBottomButton>
@@ -165,21 +165,22 @@ const ProductDiv = styled.div`
     background-color: #D5D5D5;
     border: 3px solid #7B7B7B;
     border-radius: 15px;
+
     .main_text {
         height: 50px;
         font-weight: 500;
         margin-bottom: 15px;
         line-height: 1.5;
-
-        @media screen and (max-width:767px) {
-            -webkit-text-size-adjust: 60%; /* Chrome, Safari, NewOpera */
-            -ms-text-size-adjust: 60%; /* IE */
-            -moz-text-size-adjust: 60%; /* FireFox */
-            -o-text-size-adjust: 60%; /* NewOpera */
-        }
     }
     .main_price {
         margin-top: 1px;
+    }
+
+    @media screen and (max-width:767px) {
+        -webkit-text-size-adjust: 60%; /* Chrome, Safari, NewOpera */
+        -ms-text-size-adjust: 60%; /* IE */
+        -moz-text-size-adjust: 60%; /* FireFox */
+        -o-text-size-adjust: 60%; /* NewOpera */
     }
 `
 const CartButton = styled.button`
@@ -189,6 +190,7 @@ const CartButton = styled.button`
     border-color: white; border-radius: 7px;
     position: absolute;
     margin-left: 300px;
+
     &:hover {
         background-color: white; border-color: black;
         color: black;
@@ -216,21 +218,31 @@ const Category = styled.p`
 
 const CartModalTop = styled.div`
     font-size: 20px; font-weight: 600;
-    .modal_price{
+
+    .cart_price {
         font-size: 25px;
         margin-top: 10px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1368px) {
+        .cart_category, .cart_title, .cart_price {
+            display: none;
+        }
     }
 `
 const CartModalBottom = styled.div`
     margin-top: 40px;
-    .modal_bottomtext {
+
+    .cart_bottomtext {
         margin-bottom: 10px;
         font-size: 25px; font-weight: 600;
     }
 
     @media screen and (min-width: 768px) and (max-width: 1368px) {
-        .modal_bottomtext {
-            font-size: 15px;
+
+        .cart_bottomtext {
+            margin-top: -20px;
+            font-size: 25px;
         }
     }
 `
@@ -240,6 +252,7 @@ const CartModalBottomButton = styled.button`
     color: white; font-size: 18px;
     border-color: white; border-radius: 10px;
     margin: 7px;
+
     &:hover {
         background-color: white; border-color: black;
         color: black;
@@ -256,6 +269,7 @@ const CartModalBottomButton = styled.button`
 const InfoTitle = styled.div`
     margin-top: 70px;
     color: white; font-size: 2.5rem; font-family: Righteous;
+
     .info_KR {
         font-size: 1.2rem;
     }
@@ -279,11 +293,12 @@ const InfoImage = styled.img`
 const InfoUnder = styled.div`
     color: white; font-size: 1.2rem; font-family: Secular One;
     margin-top: 50px;
+
     .info_price {
         margin-top: 20px;
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
-    
+
     @media screen and (max-width: 767px) {
         margin-left: 460px;
     }
@@ -292,6 +307,7 @@ const BackImage = styled.img`
     width: 150px;
     opacity: 0.5;
     margin-left: 40px; margin-bottom: 300px;
+
     &:hover {
         opacity: 0.8;
     }
@@ -302,19 +318,18 @@ const BackImage = styled.img`
     }
 `
 const InfoCartButton = styled(CartButton)`
-    display: flex; align-items: center;
+    display: flex; align-items: center; justify-content: center;
     width: 265px; height: 100px;
-    font-size: 2rem;
+    font-size: 30px;
     margin-left: 950px; padding: 20px;
+    
     .MuiSvgIcon-root {
-        font-size: 2rem;
+        font-size: 30px;
     }
     
     @media screen and (min-width: 768px) and (max-width: 1368px) {
-        -webkit-text-size-adjust: 60%; /* Chrome, Safari, NewOpera */
-        -ms-text-size-adjust: 60%; /* IE */
-        -moz-text-size-adjust: 60%; /* FireFox */
-        -o-text-size-adjust: 60%; /* NewOpera */
+        margin-top: -120px; margin-left: 730px;
+        width: 500px; height: 130px;
     }
     @media screen and (max-width: 767px) {
         margin-left: 730px;

@@ -13,10 +13,10 @@ function SubTotal() {
     const changeHandler = (checked, id) => {
         if (checked) {
             setCheckedInputs([...checkedInputs, id]);
-            console.log("주문 내용 확인 : check");
+            // console.log("주문 내용 확인 : check");
         } else {
             setCheckedInputs(checkedInputs.filter(el => el !== id));
-            console.log("주문 내용 확인 : none");
+            // console.log("주문 내용 확인 : none");
         }
     };
     const isChecked = checkedInputs.length === 1;
@@ -78,6 +78,7 @@ const SubTotalDiv = styled.div`
     padding: 30px;
     margin: 20px 15px 20px;
     border-radius: 15px;
+
     & > h2 {
         margin-bottom: 25px;
         font-size: 1.7rem; font-family: Secular One;
@@ -86,8 +87,10 @@ const SubTotalDiv = styled.div`
         font-size: 2rem;
     }
 
-    @media screen and (min-width: 768px) and (max-width: 1023px) {
+    @media screen and (min-width: 768px) and (max-width: 1368px) {
         margin-left: 40px;
+        width: 620px;
+        height: 100%;
     }
 `
 const CheckBox = styled.small`
@@ -95,8 +98,13 @@ const CheckBox = styled.small`
     align-items: center;
     width: 300px;
     margin-top: 20px;
+
     .input {
         margin-right: 5px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1368px) {
+        width: 500px;
     }
 `
 const PayButton = styled.button`

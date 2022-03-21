@@ -33,10 +33,15 @@ const ProductCheckoutDiv = styled.div`
     border: 3px solid #B1B1B1; border-radius: 15px;
     line-height: 95px;
     
+    @media screen and (min-width: 768px) and (max-width: 1368px) {
+        display: inline-block;
+        line-height: 1.5;
+        width: 980px;
+    }
     @media screen and (max-width:767px) {
-            display: inline-block;
-            line-height: 1.5;
-        }
+        display: inline-block;
+        line-height: 1.5;
+    }
         
     &:hover {
         background-color: #C3C3C3;
@@ -47,11 +52,20 @@ const ProductCheckoutDiv = styled.div`
         .text {
             font-weight: 500;
         }
+        
+        @media screen and (min-width: 768px) and (max-width: 1368px) {
+            width: 950px;
+        }
     }
     .productcheckout_price {
         width: 100px;
         margin-left: 390px;
         
+        @media screen and (min-width: 768px) and (max-width: 1368px) {
+            display: inline-block;
+            margin-left: 0;
+            width: 950px;
+        }
         @media screen and (max-width:767px) {
             display: inline-block;
             margin-left: 0;
@@ -61,6 +75,9 @@ const ProductCheckoutDiv = styled.div`
         width: 50px;
         margin-left: 20px;
         
+        @media screen and (min-width: 768px) and (max-width: 1368px) {
+            margin-left: 0;
+        }
         @media screen and (max-width:767px) {
             margin-left: 0;
         }
@@ -80,9 +97,13 @@ const RemoveButton = styled.button`
         font-weight: 600;
     }
 
+    @media screen and (min-width: 768px) and (max-width: 1368px) {
+        width: 80px; height: 40px;
+        margin-top: 10px;
+    }
     @media screen and (max-width:767px) {
-            width: 70px;
-            margin-top: 10px;
-        }
+        width: 70px;
+        margin-top: 10px;
+    }
 `
 export default ProductCheckout;
