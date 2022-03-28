@@ -22,10 +22,10 @@ function Payment() {
     const changeHandler = (checked, id) => {
         if (checked) {
             setCheckedInputs([...checkedInputs, id]);
-            console.log("약관 내용 확인 : check");
+            // console.log("약관 내용 확인 : check");
         } else {
             setCheckedInputs(checkedInputs.filter(el => el !== id));
-            console.log("약관 내용 확인 : none");
+            // console.log("약관 내용 확인 : none");
         }
     };
     const isChecked = checkedInputs.length === 1;
