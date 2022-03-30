@@ -56,7 +56,11 @@ function SubTotal() {
             />
             <PayButton
                 disabled={disabled}
-                onClick={e => navigate("/payment")}
+                onClick={e => {
+                    basket.length === 0
+                        ? alert("상품이 선택되지 않았습니다.")
+                        : navigate("/payment")
+                }}
                 style={
                     disabled
                         ? { backgroundColor: '#B8B8B8' }

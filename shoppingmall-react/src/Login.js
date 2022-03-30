@@ -17,6 +17,7 @@ function Login() {
 
     const signIn = e => {
         e.preventDefault();
+        // firebase method
         auth
             .signInWithEmailAndPassword(email, password)
             .then(auth => {
