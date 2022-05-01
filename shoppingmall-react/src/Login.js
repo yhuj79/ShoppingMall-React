@@ -16,8 +16,7 @@ function Login() {
     const [RegiError, setRegiError] = useState("");
 
     const signIn = e => {
-        e.preventDefault();
-        // firebase method
+        e.preventDefault(); // firebase method
         auth
             .signInWithEmailAndPassword(email, password)
             .then(auth => {
@@ -40,9 +39,9 @@ function Login() {
             });
     }
     const register = e => {
-        e.preventDefault();
-        // firebase method
-        auth.createUserWithEmailAndPassword(email, password)
+        e.preventDefault(); // firebase method
+        auth
+            .createUserWithEmailAndPassword(email, password)
             .then((auth) => {
                 if (auth) {
                     navigate("/")

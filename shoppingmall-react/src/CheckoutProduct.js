@@ -10,6 +10,7 @@ function ProductCheckout({ id, image, category, title, price }) {
             id: id,
         })
     }
+    
     return (
         <ProductCheckoutDiv>
             <CartImage alt="" src={image} />

@@ -8,9 +8,7 @@ import './Modal.css'
 import { useStateValue } from './StateProvider';
 
 let headID = 0;
-function Product({ id, image, category, title, price,
-    // Info Modal
-    subImageOne, subImageTwo, subImageThree, color, rdate, titleKR }) {
+function Product({ id, image, category, title, price, subImageOne, subImageTwo, subImageThree, color, rdate, titleKR }) {
     const addNextID = useRef(headID);
     let size = 0;
     headID += 1000;
@@ -31,6 +29,7 @@ function Product({ id, image, category, title, price,
     }
     const [infoModalIsOpen, setInfoModalIsOpen] = useState(false);
     const [cartModalIsOpen, setCartModalIsOpen] = useState(false);
+
     return (
         <ProductDiv>
             {/* Product - Main */}
@@ -153,6 +152,7 @@ function Product({ id, image, category, title, price,
         </ProductDiv>
     );
 }
+
 // Product CSS
 
 const ProductDiv = styled.div`
