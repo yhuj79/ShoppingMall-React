@@ -1,33 +1,33 @@
-import './App.css';
-import { useEffect } from 'react';
-import { auth } from './Firebase';
-import { useStateValue } from './StateProvider';
+import "./App.css";
+import { useEffect } from "react";
+import { auth } from "./Firebase";
+import { useStateValue } from "./StateProvider";
 
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import PageMain from './Page_Main';
-import PageCheckout from './Page_Checkout';
-import PageLogin from './Login';
-import PagePayment from './Page_Payment';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import PageMain from "./Page_Main";
+import PageCheckout from "./Page_Checkout";
+import PageLogin from "./Login";
+import PagePayment from "./Page_Payment";
 
 function App() {
-  const [{ }, dispatch] = useStateValue();
+  const [{}, dispatch] = useStateValue();
 
   useEffect(() => {
-    auth.onAuthStateChanged(authUser => {
+    auth.onAuthStateChanged((authUser) => {
       console.log(authUser);
       if (authUser) {
         dispatch({
           type: "SET_USER",
-          user: authUser
-        })
+          user: authUser,
+        });
       } else {
         dispatch({
           type: "SET_USER",
-          user: null
-        })
+          user: null,
+        });
       }
-    })
-  }, []) // deps
+    });
+  }, []); // deps
 
   return (
     <Router>
