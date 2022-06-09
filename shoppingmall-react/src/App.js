@@ -1,6 +1,6 @@
 import "./App.css";
 import { useEffect } from "react";
-import { auth } from "./firebase";
+import { auth } from "./Firebase";
 import { useStateValue } from "./StateProvider";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";

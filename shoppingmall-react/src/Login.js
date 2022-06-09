@@ -3,7 +3,7 @@ import styled from "styled-components";
 import RegisterModal from "react-modal";
 import { Link, useNavigate } from "react-router-dom";
 import LoginLogo from "./image/LoginLogo.PNG";
-import { auth } from "./firebase";
+import { auth } from "./Firebase";
 
 function Login() {
   const navigate = useNavigate();
