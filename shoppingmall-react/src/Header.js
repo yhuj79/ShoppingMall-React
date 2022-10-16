@@ -51,7 +51,7 @@ function Header() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <span className="header_optionLineOne">Created with</span>
+            <span className="header_optionLineOne">Built with</span>
             <span className="header_optionLineTwo">React</span>
           </a>
         </div>
