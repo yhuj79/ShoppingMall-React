@@ -43,11 +43,22 @@ function Product({
   const [infoModalIsOpen, setInfoModalIsOpen] = useState(false);
   const [cartModalIsOpen, setCartModalIsOpen] = useState(false);
 
+  const sizeButton = [
+    250, 255, 260, 265, 270, 275, 280, 285, 290, 295, 300, 305, 310,
+  ];
+  const buttonMap = sizeButton.map((m, idx) => {
+    return (
+      <CartModalBottomButton key={idx} onClick={() => addToBasket((size = m))}>
+        {m}
+      </CartModalBottomButton>
+    );
+  });
+
   return (
     <ProductDiv>
       {/* Product - Main */}
       <CartButton onClick={() => setCartModalIsOpen(true)}>
-        <ShoppingBasket />
+        <ShoppingBasket sx={{width: "20px", height: "20px"}} />
         <p>Cart</p>
       </CartButton>
       <div onClick={() => setInfoModalIsOpen(true)}>
@@ -164,45 +175,7 @@ function Product({
           </CartModalTop>
           <CartModalBottom>
             <p className="cart_bottomtext">Cart에 추가</p>
-            <CartModalBottomButton onClick={() => addToBasket((size = 250))}>
-              250
-            </CartModalBottomButton>
-            <CartModalBottomButton onClick={() => addToBasket((size = 255))}>
-              255
-            </CartModalBottomButton>
-            <CartModalBottomButton onClick={() => addToBasket((size = 260))}>
-              260
-            </CartModalBottomButton>
-            <CartModalBottomButton onClick={() => addToBasket((size = 265))}>
-              265
-            </CartModalBottomButton>
-            <CartModalBottomButton onClick={() => addToBasket((size = 270))}>
-              270
-            </CartModalBottomButton>
-            <CartModalBottomButton onClick={() => addToBasket((size = 275))}>
-              275
-            </CartModalBottomButton>
-            <CartModalBottomButton onClick={() => addToBasket((size = 280))}>
-              280
-            </CartModalBottomButton>
-            <CartModalBottomButton onClick={() => addToBasket((size = 285))}>
-              285
-            </CartModalBottomButton>
-            <CartModalBottomButton onClick={() => addToBasket((size = 290))}>
-              290
-            </CartModalBottomButton>
-            <CartModalBottomButton onClick={() => addToBasket((size = 295))}>
-              295
-            </CartModalBottomButton>
-            <CartModalBottomButton onClick={() => addToBasket((size = 300))}>
-              300
-            </CartModalBottomButton>
-            <CartModalBottomButton onClick={() => addToBasket((size = 305))}>
-              305
-            </CartModalBottomButton>
-            <CartModalBottomButton onClick={() => addToBasket((size = 310))}>
-              310
-            </CartModalBottomButton>
+            {buttonMap}
           </CartModalBottom>
         </div>
       </CartModal>
@@ -275,6 +248,7 @@ const Category = styled.p`
   text-decoration: underline;
   text-underline-position: under;
 `;
+
 // Cart Modal CSS
 
 const CartModalTop = styled.div`
@@ -284,14 +258,6 @@ const CartModalTop = styled.div`
   .cart_price {
     font-size: 25px;
     margin-top: 10px;
-  }
-
-  @media screen and (min-width: 768px) and (max-width: 1368px) {
-    .cart_category,
-    .cart_title,
-    .cart_price {
-      display: none;
-    }
   }
 `;
 const CartModalBottom = styled.div`
@@ -326,12 +292,8 @@ const CartModalBottomButton = styled.button`
     color: black;
     font-weight: 600;
   }
-
-  @media screen and (min-width: 768px) and (max-width: 1368px) {
-    width: 100px;
-    height: 60px;
-  }
 `;
+
 // Info Modal CSS
 
 const InfoTitle = styled.div`
@@ -344,16 +306,30 @@ const InfoTitle = styled.div`
     font-size: 1.2rem;
   }
 
+  @media screen and (min-width: 1369px) and (max-width: 1668px) {
+    zoom: 0.7;
+    margin-top: 250px;
+    margin-left: 200px;
+  }
+
   @media screen and (max-width: 767px) {
     margin-left: 460px;
   }
 `;
-const InfoImageDiv = styled.div``;
+const InfoImageDiv = styled.div`
+  @media screen and (min-width: 1369px) and (max-width: 1668px) {
+    margin-left: 200px;
+  }
+`;
 const InfoImage = styled.img`
   object-fit: contain;
   width: 400px;
   height: 300px;
   margin-right: 15px;
+
+  @media screen and (min-width: 1369px) and (max-width: 1668px) {
+    zoom: 0.7;
+  }
 
   @media screen and (max-width: 767px) {
     margin-left: 460px;
@@ -370,6 +346,11 @@ const InfoUnder = styled.div`
     font-size: 2.5rem;
   }
 
+  @media screen and (min-width: 1369px) and (max-width: 1668px) {
+    zoom: 0.7;
+    margin-left: 200px;
+  }
+
   @media screen and (max-width: 767px) {
     margin-left: 460px;
   }
@@ -382,6 +363,11 @@ const BackImage = styled.img`
 
   &:hover {
     opacity: 0.8;
+  }
+
+  @media screen and (min-width: 1369px) and (max-width: 1668px) {
+    zoom: 0.7;
+    margin-left: 200px;
   }
 
   @media screen and (max-width: 767px) {
@@ -403,6 +389,11 @@ const InfoCartButton = styled(CartButton)`
 
   .MuiSvgIcon-root {
     font-size: 30px;
+  }
+
+  @media screen and (min-width: 1369px) and (max-width: 1668px) {
+    zoom: 0.7;
+    margin-left: 200px;
   }
 
   @media screen and (min-width: 768px) and (max-width: 1368px) {

@@ -72,32 +72,25 @@ function SubTotal() {
   );
 }
 const SubTotalDiv = styled.div`
-  display: flex;
   flex-direction: column;
   position: sticky;
-  top: 100px; // 스크롤 영향 안 받게 고정
+  left: 98%;
+  bottom: 3%; // 스크롤 영향 안 받게 고정
   background-color: #d5d5d5;
   border: 3px solid #7b7b7b;
-  width: 430px;
-  min-width: 430px;
-  height: 200px;
+  width: 350px;
+  height: 180px;
   padding: 30px;
   margin: 20px 15px 20px;
   border-radius: 15px;
 
   & > h2 {
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     font-size: 1.7rem;
     font-family: Secular One;
   }
   & > h3 > span {
     font-size: 2rem;
-  }
-
-  @media screen and (min-width: 768px) and (max-width: 1368px) {
-    margin-left: 40px;
-    width: 620px;
-    height: 100%;
   }
 `;
 const CheckBox = styled.small`
@@ -108,10 +101,6 @@ const CheckBox = styled.small`
 
   .input {
     margin-right: 5px;
-  }
-
-  @media screen and (min-width: 768px) and (max-width: 1368px) {
-    width: 500px;
   }
 `;
 const PayButton = styled.button`

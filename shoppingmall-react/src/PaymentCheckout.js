@@ -57,17 +57,21 @@ const ProductCheckoutDiv = styled.div`
       width: 950px;
     }
   }
+
   @media screen and (max-width: 767px) {
+    display: block;
     .productcheckout_title,
     .productcheckout_price {
-      -webkit-text-size-adjust: 20%; /* Chrome, Safari, NewOpera */
-      -ms-text-size-adjust: 20%; /* IE */
-      -moz-text-size-adjust: 20%; /* FireFox */
-      -o-text-size-adjust: 20%; /* NewOpera */
+      width: 100%;
+      display: block;
+      font-size: 30px;
     }
   }
 `;
 const CartImage = styled.img`
   width: 150px;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
 `;
 export default PaymentPC;

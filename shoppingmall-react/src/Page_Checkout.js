@@ -18,15 +18,12 @@ function Page_Checkout() {
   );
 }
 const PageCheckout = styled.div`
-  display: flex;
 
   @media screen and (min-width: 768px) and (max-width: 1368px) {
-    display: inline-block;
-    zoom: 0.6;
+    zoom: 0.8;
   }
   @media screen and (max-width: 767px) {
-    display: inline-block;
-    zoom: 0.5;
+    zoom: 0.6;
   }
 `;
 export default Page_Checkout;

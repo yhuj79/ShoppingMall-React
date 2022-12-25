@@ -60,9 +60,12 @@ const ProductCheckoutDiv = styled.div`
     @media screen and (min-width: 768px) and (max-width: 1368px) {
       width: 950px;
     }
+    @media screen and (max-width: 767px) {
+      display: inline-block;
+    }
   }
   .productcheckout_price {
-    width: 100px;
+    width: 105px;
     margin-left: 390px;
 
     @media screen and (min-width: 768px) and (max-width: 1368px) {
