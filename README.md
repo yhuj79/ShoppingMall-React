@@ -7,4 +7,4 @@
 <img src=https://raw.githubusercontent.com/yhuj79/ShoppingMall-React/master/thumnail/20220225/4.PNG width=600>
 </div>
 
-#### :ballot_box_with_check: <a target="_blank" rel="noopener noreferrer" href="https://shoppingmall-react.web.app/">Firebase Hosting</a>
+#### :ballot_box_with_check: <a target="_blank" rel="noopener noreferrer" href="https://shoppingmall-react-c77c7.web.app">Firebase Hosting</a>

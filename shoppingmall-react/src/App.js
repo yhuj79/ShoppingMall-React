@@ -10,6 +10,7 @@ import PageLogin from "./Login";
 import PagePayment from "./Page_Payment";
 
 function App() {
+  // eslint-disable-next-line no-empty-pattern
   const [{}, dispatch] = useStateValue();
 
   useEffect(() => {
@@ -27,7 +28,7 @@ function App() {
         });
       }
     });
-  }, []); // deps
+  }, [dispatch]);
 
   return (
     <Router>

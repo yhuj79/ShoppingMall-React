@@ -24,6 +24,7 @@ function Product({
   const addNextID = useRef(headID);
   let size = 0;
   headID += 1000;
+  // eslint-disable-next-line no-unused-vars
   const [{ basket }, dispatch] = useStateValue();
   const addToBasket = () => {
     dispatch({
@@ -32,7 +33,7 @@ function Product({
         id: (addNextID.current += 1),
         image: image,
         category: category,
-        title: title + "ㅤ[ " + size + " ]",
+        title: title + " [ " + size + " ]",
         price: price,
       },
     });
