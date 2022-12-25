@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 
 function SubTotal() {
   // eslint-disable-next-line no-unused-vars
-  const [{ basket }, dispatch] = useStateValue();
+  const [{ basket, user }, dispatch] = useStateValue();
   const navigate = useNavigate();
 
   const [checkedInputs, setCheckedInputs] = useState([]);
@@ -62,6 +62,8 @@ function SubTotal() {
         onClick={(e) => {
           basket.length === 0
             ? alert("상품이 선택되지 않았습니다.")
+            : !user
+            ? navigate("/login")
             : navigate("/payment");
         }}
         style={disabled ? { backgroundColor: "#B8B8B8" } : { afterButton }}
