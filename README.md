@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/yhuj79/ShoppingMall-React/master/thumnail/thumnail.jpg" width="600">
+<img src="https://raw.githubusercontent.com/yhuj79/ShoppingMall-React/master/thumbnail/thumbnail.jpg" width="600">
 
 Jordan 신발 쇼핑몰
 
@@ -11,16 +11,16 @@ Jordan 신발 쇼핑몰
 ## About The Project
 
 <div>
-    <img align=top src=https://raw.githubusercontent.com/yhuj79/ShoppingMall-React/master/thumnail/20230202/1.png width=400>
-    <img align=top src=https://raw.githubusercontent.com/yhuj79/ShoppingMall-React/master/thumnail/20230202/2.png width=400>
+    <img align=top src=https://raw.githubusercontent.com/yhuj79/ShoppingMall-React/master/thumbnail/20230202/1.png width=400>
+    <img align=top src=https://raw.githubusercontent.com/yhuj79/ShoppingMall-React/master/thumbnail/20230202/2.png width=400>
 </div>
 <div>
-    <img align=top src=https://raw.githubusercontent.com/yhuj79/ShoppingMall-React/master/thumnail/20230202/3.png width=400>
-    <img align=top src=https://raw.githubusercontent.com/yhuj79/ShoppingMall-React/master/thumnail/20230202/4.png width=400>
+    <img align=top src=https://raw.githubusercontent.com/yhuj79/ShoppingMall-React/master/thumbnail/20230202/3.png width=400>
+    <img align=top src=https://raw.githubusercontent.com/yhuj79/ShoppingMall-React/master/thumbnail/20230202/4.png width=400>
 </div>
 <div>
-    <img align=top src=https://raw.githubusercontent.com/yhuj79/ShoppingMall-React/master/thumnail/20230202/5.png width=400>
-    <img align=top src=https://raw.githubusercontent.com/yhuj79/ShoppingMall-React/master/thumnail/20230202/6.png width=400>
+    <img align=top src=https://raw.githubusercontent.com/yhuj79/ShoppingMall-React/master/thumbnail/20230202/5.png width=400>
+    <img align=top src=https://raw.githubusercontent.com/yhuj79/ShoppingMall-React/master/thumbnail/20230202/6.png width=400>
 </div>
 
 ### :alarm_clock: 제작 기간
